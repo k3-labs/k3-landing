@@ -32,12 +32,10 @@ const Animation = () => {
     intervalTwo = setInterval(() => {
       moveTwo()
     }, 3000) // Change this to the desired duration for maskTwo
-    moveTwo()
     timeoutId = setTimeout(() => {
       intervalOne = setInterval(() => {
         moveOne()
       }, 3000) // Change this to the desired duration for maskOne
-      moveOne()
     }, 1500) // Delay the start of intervalOne by 1 second
 
     // Clear intervals on component unmount
