@@ -1,5 +1,3 @@
-import { GeistMono } from 'geist/font/mono'
-import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 
 export const metadata = {
@@ -10,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      className={`${GeistSans.variable} ${GeistMono.variable} scrollbar-thin scrollbar-track-gray scrollbar-thumb-gray-darkGray text-white `}
+      className={`scrollbar-thin scrollbar-track-gray scrollbar-thumb-gray-darkGray text-white  dark`}
       lang="en"
     >
       <body className="bg-black">{children}</body>
