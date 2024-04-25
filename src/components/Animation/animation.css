@@ -1,0 +1,36 @@
+h2 {
+  display: flex;
+  font-size: 500px;
+  line-height: 1.06;
+  font-size: 72px;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
+.mask {
+  height: 77px;
+  flex-grow: 1;
+  /* display: contents; */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--offset);
+}
+
+.mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 72px;
+  padding-bottom: var(--offset);
+}
+
+.mask span[data-show] {
+  transform: translateY(-100%);
+  transition: 0.5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+  transform: translateY(-200%);
+  transition: 0.5s transform ease-in-out;
+}
