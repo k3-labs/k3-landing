@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      className={`scrollbar-thin scrollbar-track-gray scrollbar-thumb-gray-darkGray text-white  dark`}
+      className={`scrollbar-thin scrollbar-track-gray scrollbar-thumb-gray-darkGray text-white  bg-black dark`}
       lang="en"
     >
       <body className="bg-black">{children}</body>

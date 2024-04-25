@@ -9,7 +9,7 @@ import Pricing from '@/components/Pricing'
 
 export default function Home() {
   return (
-    <main className="bg-transparent flex min-h-screen w-[(100vh-12px)]  flex-col items-center gap-y-32  ">
+    <main className="dark  text-white  flex min-h-screen w-[(100vh-12px)]  flex-col items-center gap-y-32  ">
       <Navigation />
       <Hero />
       <Deploy />
