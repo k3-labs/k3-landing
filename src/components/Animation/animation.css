@@ -21,8 +21,8 @@ h2 {
   display: block;
   box-sizing: border-box;
   position: absolute;
-  top: 72px;
-  padding-bottom: var(--offset);
+  overflow: hidden;
+  top: 76.5px;
 }
 
 .mask span[data-show] {
@@ -31,6 +31,6 @@ h2 {
 }
 
 .mask span[data-up] {
-  transform: translateY(-200%);
+  transform: translateY(-250%);
   transition: 0.5s transform ease-in-out;
 }

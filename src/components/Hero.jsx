@@ -27,10 +27,9 @@ const cards = [
 ]
 
 const Hero = () => {
-  console.log(vector)
   return (
     <div
-      className="flex w-full pt-[250px] gap-8  flex-col  items-center "
+      className="flex w-full max-h-[1080px] h-[calc(100vh-80px)] pt-[250px] gap-8  flex-col  items-center "
       style={{
         backgroundImage: `url(${vector.src})`,
         backgroundRepeat: 'no-repeat',
@@ -46,8 +45,15 @@ const Hero = () => {
         <br /> compute, storage, and execution.
       </p>
 
-      <div className="flex    gap-x-3">
-        <Button className="bg-white text-blackLight">Demo App</Button>
+      <div className="flex gap-x-3">
+        <a
+          className={
+            'bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+          }
+          href="https://app.k3-labs.com/"
+        >
+          Launch app
+        </a>
         <Button className="bg-black border-darkGray ">
           Become a design partner
         </Button>

@@ -1,4 +1,3 @@
-import Button from '@/components/Button'
 import logo from '@/components/icons/logo-white.svg'
 import Image from 'next/image'
 
@@ -21,8 +20,14 @@ const Navigation = () => {
           <a href="#">Documentation</a>
         </li>
       </ul>
-
-      <Button className="bg-white text-blackLight">Demo App</Button>
+      <a
+        className={
+          'bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+        }
+        href="https://app.k3-labs.com/"
+      >
+        Launch app
+      </a>
     </nav>
   )
 }

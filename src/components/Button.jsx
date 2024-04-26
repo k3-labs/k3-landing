@@ -2,6 +2,7 @@ import { twMerge } from 'tailwind-merge'
 
 const Button = (props) => {
   const { children, className } = props
+
   return (
     <button
       className={twMerge(

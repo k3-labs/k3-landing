@@ -3,7 +3,7 @@ import vector from '../app/vector-globe.svg'
 
 const Contact = () => {
   return (
-    <div className="relative rounded-2xl overflow-hidden bg-blackLight max-w-6xl min-w-[50rem] mx-20 xl:w-[72rem]">
+    <div className="relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl min-w-[50rem] mx-20 xl:w-[72rem]">
       <div className="flex flex-col gap-12 pl-8 py-12 xl:w-[72rem]">
         <div className="flex flex-col justify-between gap-4 w-full">
           <h3>Connect with us</h3>

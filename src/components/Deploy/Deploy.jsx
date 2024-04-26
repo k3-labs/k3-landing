@@ -18,11 +18,11 @@ const Deploy = () => {
             in Web2 languages on Web3 / decentralized hardware
           </h4>
           <p className="text-[14px] leading-[25.2px] text-gray text-center">
-            Current support for Rust. Future-proof your builds by leveraging the
-            inherent security and scalability of restaking. <br />{' '}
-            <span className="text-purple">
-              Typescript, and Javascript coming soon.
-            </span>
+            Current support for <span className="text-purple">Rust</span>.
+            Future-proof your builds by <br /> leveraging the inherent security
+            and scalability of restaking. <br />{' '}
+            <span className="text-purple">Typescript</span>, and{' '}
+            <span className="text-purple">Javascript</span> coming soon.
           </p>
         </div>
       </div>

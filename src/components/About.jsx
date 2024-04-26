@@ -1,4 +1,3 @@
-import Button from '@/components/Button'
 import Image from 'next/image'
 
 import securityIcon from './icons/security-icon.svg'
@@ -7,7 +6,7 @@ import web2Icon from './icons/web2-icon.svg'
 
 const About = () => {
   return (
-    <div className="flex flex-col rounded-2xl bg-blackLight max-w-6xl mx-20">
+    <div className="flex flex-col rounded-2xl border border-darkGray rounded-2xl max-w-6xl mx-20">
       <div className="flex justify-between items-center py-10 px-12">
         <h4 className="text-gray">
           <span className="text-white">Launch to production</span> in{' '}
@@ -16,14 +15,22 @@ const About = () => {
           <br />
           reduce direct and indirect costs versus cloud-based services
         </h4>
-        <Button className="bg-white text-blackLight">Demo App</Button>
+
+        <a
+          className={
+            'bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+          }
+          href="https://app.k3-labs.com/"
+        >
+          Launch app
+        </a>
       </div>
       <div className="grid grid-cols-3 border-t border-darkGray">
         <div className="flex flex-col py-8 px-12 border-r border-darkGray gap-4">
           <h5 className="subtitle">Turnkey middleware for Web3</h5>
           <Image src={turnkeyIcon} alt="icon" width={32} height={32} />
 
-          <p className="body-3 w-5/6">
+          <p className="body-3 ">
             Integrate any decentralized middleware service, or build your own,
             using our enterprise-grade SDKs or point and click web-forms, all
             backed by SaaS
@@ -33,7 +40,7 @@ const About = () => {
           <h5 className="subtitle">Built on Shared Security</h5>
           <Image src={securityIcon} alt="icon" width={32} height={32} />
 
-          <p className="body-3 w-5/6">
+          <p className="body-3 ">
             Web3 app development desperately needs better middleware – shared
             security allows for pay-as-you-go, validation on-demand, radically
             lowering costs
@@ -43,7 +50,7 @@ const About = () => {
           <h5 className="subtitle">Built with Web2 in mind</h5>
           <Image src={web2Icon} alt="icon" width={32} height={32} />
 
-          <p className="body-3 w-5/6">
+          <p className="body-3 ">
             No need to learn Solidity, study node ops procedures, or worry about
             gas fees. Use simple point and click deployment workflows instead
           </p>
