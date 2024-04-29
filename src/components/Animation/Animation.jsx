@@ -46,6 +46,7 @@ const Animation = () => {
       clearInterval(intervalOne)
       clearInterval(intervalTwo)
       clearTimeout(timeoutId)
+
       setIntervals()
     }, 16500)
     // Clear intervals on component unmount
@@ -59,13 +60,20 @@ const Animation = () => {
 
   return (
     <>
-      <h2 className=" flex w-full items-center  mx-auto  text-white">
+      <div className="mx-auto md:hidden w-full max-w-7xl  ">
+        <h2 className="  flex flex-col items-center text-[40px] gap-2    text-white bottom-20">
+          Blockchain.
+          <div>
+            <span className="text-blue"> Made</span>.Simple.
+          </div>
+        </h2>
+      </div>
+      <h2 className=" hidden md:flex  w-full items-center justify-center  mx-auto  text-white">
         <div className="mask mask-one items-center justify-end">
           <span data-show>Blockchain</span>
           <span>Deployment</span>
           <span>Decentralization</span>
           <span>Web 3.0</span>
-          <span>Blockchain</span>
         </div>
         .
         <span className="text-blue pl-2 h-[77px]">

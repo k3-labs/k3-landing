@@ -52,17 +52,16 @@ const Design = () => {
   }, [])
 
   return (
-    <div className="flex flex-col  items-center">
+    <div className="mx-5 md:mx-0  flex flex-col  items-center">
       <div className="flex gap-8 mb-16 flex-col max-w-3xl  items-center ">
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 ">
           <Image src={designIcon} alt="icon" width={40} height={40} />
           <h3 id="design">Design</h3>
         </div>
         <div className="flex gap-4    flex-col  items-center ">
           <h4 className=" text-center ">
-            A simple, template-driven approach to interconnectivity
-            <br />
-            between traditional systems and the Web3 world
+            A simple, template-driven approach to interconnectivity between
+            traditional systems and the Web3 world
           </h4>
           <p className="body-2 text-gray text-center">
             Design business and technical workflows and applications to{' '}
@@ -75,8 +74,8 @@ const Design = () => {
           </p>
         </div>
       </div>
-      <div className=" w-full relative items-center max-w-6xl flex overflow-hidden h-[700px] ">
-        <div className="w-2/5">
+      <div className=" w-full relative  justify-between items-center max-w-6xl flex flex-col-reverse md:flex-row md:overflow-hidden  mb-36 md:mb-0 md:h-[700px] ">
+        <div className="md:w-2/5 pt-10">
           <Stepper />
         </div>
 
@@ -85,13 +84,13 @@ const Design = () => {
           alt="eclipse"
           width={600}
           height={800}
-          className="absolute -bottom-[90px] left-[300px] "
+          className="absolute bottom-[50px] md:-bottom-[90px] md:left-[300px] "
         />
 
         <Image
           src={image}
           alt="image"
-          className="min-w-[1152px] w-[1152px] h-[580px]  bg-black border border-darkGray rounded-xl py-8 absolute px-10  -right-[500px] top-0 "
+          className="w-full max-w-[1152px]  max-h-[580px]  bg-black border relative border-darkGray rounded-xl p-2 md:py-8 md:absolute md:px-10  md:-right-[500px] top-0 "
         />
       </div>
       <Pricing />

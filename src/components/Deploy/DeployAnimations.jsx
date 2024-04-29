@@ -41,32 +41,26 @@ const DeployAnimations = () => {
   }, [])
 
   return (
-    <div className="w-full gap-2 justify-between pl-3 pb-3 pt-3 flex items-center">
-      <div className="flex flex-col ">
+    <div className="w-full gap-2 justify-between md:pl-3 md:py-3 py-0.5 pl-0.5 flex items-center">
+      <div className="flex flex-col w-/12 ">
         <Image
           src={first}
           id="first"
           alt="icon"
-          width={343.2}
-          height={187.2}
-          className="opacity-20 transition duration-1000 ease-in-out"
+          className="opacity-20 w-full transition duration-1000 ease-in-out"
         />
         <Image
           src={second}
           id="second"
           alt="icon"
-          width={343.2}
-          height={187.2}
-          className="opacity-20 transition duration-1000 ease-in-out"
+          className="opacity-20 w-full transition duration-1000 ease-in-out"
         />
       </div>
       <Image
         src={third}
         id="third"
         alt="icon"
-        width={332.8}
-        height={301.6}
-        className="opacity-20 transition duration-1000 ease-in-out"
+        className="opacity-20 w-1/2 transition duration-1000 ease-in-out"
       />
     </div>
   )

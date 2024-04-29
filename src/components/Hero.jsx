@@ -1,6 +1,9 @@
+'use client'
+
 import Animation from '@/components/Animation/Animation'
 import Button from '@/components/Button'
 import Card from '@/components/Card'
+import { scrollIntoView } from '@/components/Navigation'
 import vector from '../app/vector.svg'
 import cryptoIcon from './icons/crypto-icon.svg'
 import gasIcon from './icons/gas-icon.svg'
@@ -29,7 +32,7 @@ const cards = [
 const Hero = () => {
   return (
     <div
-      className="flex w-full max-h-[1080px] h-[calc(100vh-80px)] pt-[250px] gap-8  flex-col  items-center "
+      className=" w-full lg:max-h-[1080px] lg:h-[calc(100vh-80px)] pt-20 md:pt-[250px]  "
       style={{
         backgroundImage: `url(${vector.src})`,
         backgroundRepeat: 'no-repeat',
@@ -37,31 +40,45 @@ const Hero = () => {
         backgroundPosition: 'center'
       }}
     >
-      <Animation />
+      <div className="flex gap-6  md:gap-8  flex-col  items-center max-w-7xl mx-auto">
+        <Animation />
 
-      <p className="align-center  text-[20px] text-center leading-[34px] font-normal">
-        Easily design and deploy business workflows and applications that
-        utilize the power of decentralized
-        <br /> compute, storage, and execution.
-      </p>
+        <p className="align-center text-sm  md:mx-0 mx-5md:text-[20px] max-w-6xl text-center md:leading-[34px] font-normal">
+          Easily design and deploy business workflows and applications that
+          utilize the power of decentralized compute, storage, and execution.
+        </p>
 
-      <div className="flex gap-x-3">
-        <a
-          className={
-            'bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
-          }
-          href="https://app.k3-labs.com/"
-        >
-          Launch app
-        </a>
-        <Button className="bg-black border-darkGray ">
-          Become a design partner
-        </Button>
-      </div>
-      <div className="flex gap-x-5 mt-20">
-        {cards.map((card) => (
-          <Card key={card.title} icon={card.icon} title={card.title} />
-        ))}
+        <div className="flex gap-x-3 max-w-6xl">
+          <a
+            className={
+              'bg-white hidden text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+            }
+            href="https://app.k3-labs.com/"
+          >
+            Launch app
+          </a>
+          <Button
+            className=" border-darkGray "
+            onClick={() => scrollIntoView('contact')}
+            style={{
+              background:
+                'linear-gradient(171deg, rgba(255, 255, 255, 0.09) 36.08%, rgba(255, 255, 255, 0.072) 86.19%)'
+            }}
+          >
+            <span className="hidden md:block">Become a design partner</span>
+            <span className="md:hidden">Connect with us</span>
+          </Button>
+        </div>
+        <div className="max-w-6xl grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-2 w-full mt-8 md:mt-20">
+          {cards.map((card, idx) => (
+            <Card
+              idx={idx}
+              key={card.title}
+              icon={card.icon}
+              title={card.title}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

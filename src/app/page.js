@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <main className=" bg-transparent text-white  flex min-h-screen w-[(100vh-12px)]  flex-col items-center gap-y-32  ">
+    <main className=" bg-transparent text-white  flex min-h-screen w-[(100vh-12px)]  flex-col items-center gap-y-16 md:gap-y-32  ">
       <Navigation />
       <Hero />
       <Deploy />
