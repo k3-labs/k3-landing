@@ -51,19 +51,19 @@ const Hero = () => {
         <div className="flex gap-x-3 max-w-6xl">
           <a
             className={
-              'bg-white hidden text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+              'bg-white hidden md:block text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
             }
             href="https://app.k3-labs.com/"
           >
             Launch app
           </a>
           <Button
-            className=" border-darkGray "
+            className=" border-darkGray bg-darkGray/80 "
             onClick={() => scrollIntoView('contact')}
-            style={{
-              background:
-                'linear-gradient(171deg, rgba(255, 255, 255, 0.09) 36.08%, rgba(255, 255, 255, 0.072) 86.19%)'
-            }}
+            // style={{
+            //   background:
+            //     'linear-gradient(171deg, rgba(255, 255, 255, 0.09) 36.08%, rgba(255, 255, 255, 0.072) 86.19%)'
+            // }}
           >
             <span className="hidden md:block">Become a design partner</span>
             <span className="md:hidden">Connect with us</span>

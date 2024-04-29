@@ -67,7 +67,7 @@ export default function Example() {
   return (
     <Disclosure
       as="nav"
-      className="w-full"
+      className="w-full fixed"
       // style={{
       //   backgroundColor: 'transparent'
       // }}

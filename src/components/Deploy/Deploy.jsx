@@ -5,7 +5,7 @@ import deployIcon from '../icons/deploy-icon.svg'
 
 const Deploy = () => {
   return (
-    <>
+    <div className="flex flex-col items-center gap-12">
       <div className="mx-5 md:mx-0 flex gap-4 md:gap-8  flex-col max-w-3xl  items-center ">
         <div className="flex gap-x-2 items-center">
           <Image
@@ -46,7 +46,7 @@ const Deploy = () => {
           <DeployStepper />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
