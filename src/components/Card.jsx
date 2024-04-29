@@ -4,7 +4,7 @@ const Card = (props) => {
   const { icon, title, idx } = props
   return (
     <div
-      className="flex flex-col w-[146px]  justify-center items-start p-6 gap-4 md:max-w-72  h-[76px] md:h-[120px] rounded-2xl "
+      className="flex flex-col  w-[146px] sm:w-[170px] md:w-full justify-center items-start p-6 gap-4 max-w-72  h-[76px] md:h-[120px] rounded-2xl "
       style={{
         justifySelf: idx % 2 === 0 ? 'end' : 'start',
         background:
