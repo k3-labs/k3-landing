@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="flex gap-6  md:gap-8  flex-col  items-center max-w-7xl mx-auto">
         <Animation />
 
-        <p className="align-center text-sm  md:mx-0 mx-5md:text-[20px] max-w-6xl text-center md:leading-[34px] font-normal">
+        <p className="align-center text-sm   mx-5 md:text-[20px] max-w-6xl text-center md:leading-[34px] font-normal">
           Easily design and deploy business workflows and applications that
           utilize the power of decentralized compute, storage, and execution.
         </p>
@@ -51,14 +51,14 @@ const Hero = () => {
         <div className="flex gap-x-3 max-w-6xl">
           <a
             className={
-              'bg-white hidden md:block text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
+              'bg-white hidden md:block text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize md:button   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
             }
             href="https://app.k3-labs.com/"
           >
             Launch app
           </a>
           <Button
-            className=" border-darkGray bg-darkGray/80 "
+            className=" border-darkGray md:button bg-darkGray/80 "
             onClick={() => scrollIntoView('contact')}
             // style={{
             //   background:

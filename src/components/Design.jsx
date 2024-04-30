@@ -4,7 +4,7 @@ import Stepper from '@/components/Stepper'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import eclipse from '../app/eclipse.svg'
-import image from '../app/image.png'
+import image from '../app/image.svg'
 import designIcon from './icons/design-icon.svg'
 
 const Design = () => {
@@ -52,9 +52,9 @@ const Design = () => {
   }, [])
 
   return (
-    <div className="mx-5 md:mx-0  flex flex-col  items-center">
+    <div className="mx-5   flex flex-col  items-center">
       <div className="flex gap-8 mb-16 flex-col max-w-3xl  items-center ">
-        <div className="flex gap-x-2 ">
+        <div className="flex gap-x-2 items-center ">
           <Image src={designIcon} alt="icon" width={40} height={40} />
           <h3 id="design">Design</h3>
         </div>
@@ -63,7 +63,7 @@ const Design = () => {
             A simple, template-driven approach to interconnectivity between
             traditional systems and the Web3 world
           </h4>
-          <p className="body-2 text-gray text-center">
+          <p className="body-3 md:body-2 text-gray text-center">
             Design business and technical workflows and applications to{' '}
             <span className="text-blue">Read</span> from,{' '}
             <span className="text-blue">Write</span> to, and{' '}
@@ -74,8 +74,8 @@ const Design = () => {
           </p>
         </div>
       </div>
-      <div className=" w-full relative  justify-between items-center max-w-6xl flex flex-col-reverse md:flex-row md:overflow-hidden  mb-36 md:mb-0 md:h-[700px] ">
-        <div className="md:w-2/5 pt-10">
+      <div className=" w-full relative  justify-between items-center max-w-6xl flex flex-col-reverse md:flex-row md:overflow-hidden  mb-36 md:mb-0 md:h-[600px] ">
+        <div className="md:w-[32%] pt-10 md:pt-0">
           <Stepper />
         </div>
 
@@ -84,14 +84,17 @@ const Design = () => {
           alt="eclipse"
           width={600}
           height={800}
-          className="absolute bottom-[50px] md:-bottom-[90px] md:left-[300px] "
+          className="absolute bottom-[50px] md:-bottom-[50px] md:left-[300px] "
         />
 
-        <Image
-          src={image}
-          alt="image"
-          className="w-full max-w-[1152px]  max-h-[580px]  bg-black border relative border-darkGray rounded-xl p-2 md:py-8 md:absolute md:px-10  md:-right-[500px] top-0 "
-        />
+        <div className=" bg-black relative z-10 max-w-[712px] justify-center rounded-lg md:rounded-[14.4px] border border-darkGray flex flex-col h-fit ">
+          <div className="flex gap-0.5 md:gap-1 border-b border-darkGray md:p-4 p-2 ">
+            <span className="rounded-full w-1 h-1 md:h-[8.8px] md:w-[8.8px] bg-red" />
+            <span className="rounded-full w-1 h-1 md:h-[8.8px] md:w-[8.8px] bg-yellow" />
+            <span className="rounded-full w-1 h-1 md:h-[8.8px] md:w-[8.8px] bg-greenDark" />
+          </div>
+          <Image src={image} alt="image" className="w-fit p-2   rounded-xl  " />
+        </div>
       </div>
       <Pricing />
     </div>

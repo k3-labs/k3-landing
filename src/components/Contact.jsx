@@ -1,5 +1,7 @@
 'use client'
 import Button from '@/components/Button'
+import Image from 'next/image'
+import eclipse from '../app/eclipse.svg'
 import vector from '../app/vector-globe.svg'
 
 const Contact = () => {
@@ -22,7 +24,7 @@ const Contact = () => {
       <div className="flex flex-col gap-12 md:pl-8 md:py-12 pb-10 pt-16 px-4 xl:w-[72rem]">
         <div className="flex flex-col justify-between gap-4 w-full">
           <h3 id="contact">Connect with us</h3>
-          <p className="body-2 w-5/6">
+          <p className="body-2 text-[14px] md:text-[16px] w-5/6">
             Ask us about whether your workflow can be modeled in K3
           </p>
         </div>
@@ -31,7 +33,10 @@ const Contact = () => {
           onSubmit={handleSubmit}
         >
           <div>
-            <label htmlFor="email" className="subtitle-2">
+            <label
+              htmlFor="email"
+              className="subtitle-2 text-[14px] md:text-[16px]"
+            >
               Your Email
             </label>
             <div className="mt-2">
@@ -40,13 +45,16 @@ const Contact = () => {
                 name="from"
                 required
                 id="email"
-                className="block body-3  w-full max-w-96 bg-transparent h-[48px] rounded-md border border-darkGray p-4  "
+                className="block body-3 text-[12px] md:text-[14px] w-full max-w-96 bg-transparent h-[48px] rounded-md border border-darkGray p-4  "
                 placeholder="Email"
               />
             </div>
           </div>{' '}
           <div>
-            <label htmlFor="email" className="subtitle-2">
+            <label
+              htmlFor="email"
+              className="subtitle-2 text-[14px] md:text-[16px]"
+            >
               How we can help you?
             </label>
             <div className="mt-2">
@@ -55,23 +63,31 @@ const Contact = () => {
                 name="text"
                 required
                 id="email"
-                className=" body-3 w-full  max-w-96 min-h-[136px] bg-transparent rounded-md border border-darkGray p-4  "
+                className=" body-3 text-[12px] md:text-[14px] w-full  max-w-96 min-h-[136px] bg-transparent rounded-md border border-darkGray p-4  "
                 placeholder="More information"
               />
             </div>
           </div>
-          <Button className="bg-blue self-center border-none py-3 px-4  ">
+          <Button className="bg-blue self-center md:self-start border-none py-3 px-4  ">
             Submit form
           </Button>
         </form>
       </div>
       <div
-        className="w-3/5 h-full absolute -right-12  md:-right-40 -top-60 md:top-0  opacity-80  flex-grow"
+        className="w-full h-full md:h-[730px] absolute left-24  md:-right-40 -top-60 md:-top-24 opacity-80  flex-grow"
         style={{
           backgroundImage: `url(${vector.src})`,
-          backgroundRepeat: 'no-repeat'
-          // backgroundSize: 'cover'
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
         }}
+      />
+
+      <Image
+        src={eclipse}
+        alt="eclipse"
+        width={420}
+        height={400}
+        className="absolute opacity-40 hidden md:block md:bottom-[50px] md:left-[600px] "
       />
     </div>
   )

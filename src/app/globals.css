@@ -32,10 +32,10 @@ we still enforce color-scheme: dark, despite the user preference */
     @apply text-5xl leading-[1.4] tracking-[-1px] font-medium;
   }
   h3 {
-    @apply text-[24px] lg:text-[32px] leading-[1.4] tracking-[-1%] font-medium;
+    @apply text-[24px] md:text-[32px] leading-[1.4] tracking-[-1%] font-medium;
   }
   h4 {
-    @apply text-[20px] lg:text-[28px]   leading-[1.4] tracking-[-1%] font-medium;
+    @apply text-[20px] md:text-[28px]   leading-[1.4] tracking-[-1%] font-medium;
   }
   p {
     @apply m-0;
@@ -44,30 +44,30 @@ we still enforce color-scheme: dark, despite the user preference */
 
 @layer components {
   .body-1 {
-    @apply font-normal   text-xl leading-[170%]  text-white;
+    @apply font-normal   text-xl leading-[170%];
   }
   .body-2 {
-    @apply font-normal text-base leading-[160%]  text-white;
+    @apply font-normal text-base leading-[160%];
   }
   .body-3 {
-    @apply font-normal text-sm leading-[180%]  text-white;
+    @apply font-normal  text-sm leading-[180%];
   }
   .subtitle {
-    @apply font-medium  text-lg leading-[140%]  text-white;
+    @apply font-medium  text-lg leading-[140%];
   }
   .subtitle-2 {
-    @apply font-normal text-base leading-[140%]  text-white;
+    @apply font-normal text-base leading-[140%];
   }
   .button {
-    @apply font-normal text-base leading-[120%]  text-white;
+    @apply font-normal text-sm md:text-base leading-[120%];
   }
   .button-small {
-    @apply font-normal text-sm leading-[140%]  text-white;
+    @apply font-normal text-xs md:text-sm leading-[140%];
   }
   .caption {
-    @apply font-normal text-xs leading-[140%]  text-white;
+    @apply font-normal text-xs leading-[140%];
   }
   .caption-2 {
-    @apply font-normal text-[10px] leading-[140%]  text-white;
+    @apply font-normal text-[10px] leading-[140%];
   }
 }

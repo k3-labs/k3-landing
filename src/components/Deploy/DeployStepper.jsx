@@ -71,7 +71,7 @@ const DeployStepper = () => {
               height={20}
             /> */}
             </span>
-            <p className="body-3 line-clamp-2 text-white">{step.content}</p>
+            <p className="body-3  text-white">{step.content}</p>
           </li>
         ))}
       </ol>
@@ -128,7 +128,7 @@ const MobileStepper = () => {
           ))}
         </ol>
       </nav>
-      <p className="caption relative line-clamp-2  text-white text-center">
+      <p className="caption relative   text-white text-center">
         {steps?.[currentStep]?.content}
       </p>
     </div>

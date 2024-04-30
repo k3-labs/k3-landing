@@ -65,13 +65,7 @@ export default function Example() {
   }, [])
 
   return (
-    <Disclosure
-      as="nav"
-      className="w-full fixed"
-      // style={{
-      //   backgroundColor: 'transparent'
-      // }}
-    >
+    <Disclosure as="nav" className="w-full fixed z-50">
       {({ open, close }) => (
         <div
           id="full-nav"
@@ -83,7 +77,12 @@ export default function Example() {
         >
           <div className="h-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
             <div className="flex h-16 justify-between items-center">
-              <Image priority src={logo} alt="Follow us on Twitter" />
+              <Image
+                priority
+                src={logo}
+                className="w-20 md:w-32"
+                alt="Follow us on Twitter"
+              />
 
               <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
                 <ul className="flex flex-row justify-between items-center p-0 gap-10 ">
@@ -103,7 +102,9 @@ export default function Example() {
                     </a>
                   </li>
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a href="#">Documentation</a>
+                    <a href="https://docs.k3-labs.com/introduction">
+                      Documentation
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -155,7 +156,7 @@ export default function Example() {
               Connect with us
             </Button>
             <ul className="bg-black  w-full flex flex-col justify-between items-center pb-12 gap-4 ">
-              <li className="text-white flex button-small w-[calc(100%-40px)] border-darkGray border-b pb-2">
+              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
                   href="#home"
                   className="w-full"
@@ -167,7 +168,7 @@ export default function Example() {
                   Home
                 </a>
               </li>
-              <li className="text-white flex button-small w-[calc(100%-40px)] border-darkGray border-b pb-2">
+              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
                   href="#deploy"
                   className="w-full"
@@ -179,7 +180,7 @@ export default function Example() {
                   Deploy
                 </a>
               </li>
-              <li className="text-white flex button-small w-[calc(100%-40px)] border-darkGray border-b pb-2">
+              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
                   href="#design"
                   className="w-full"
@@ -191,7 +192,7 @@ export default function Example() {
                   Design
                 </a>
               </li>
-              <li className="text-white flex button-small w-[calc(100%-40px)] border-darkGray border-b pb-2">
+              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
                   href="https://docs.k3-labs.com/introduction"
                   className="w-full"
