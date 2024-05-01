@@ -40,9 +40,8 @@ const Hero = () => {
         backgroundPosition: 'center'
       }}
     >
-      <div className="flex gap-6  md:gap-8  flex-col  items-center max-w-7xl mx-auto">
-        <Animation />
-
+      <Animation />
+      <div className="flex gap-6  md:gap-8 mt-6 md:mt-8 flex-col  items-center max-w-7xl mx-auto">
         <p className="align-center text-base   mx-5 md:text-[20px] max-w-[950px] text-center md:leading-[34px] font-normal">
           Easily design and deploy business workflows and applications that
           utilize the power of decentralized compute, storage, and execution.

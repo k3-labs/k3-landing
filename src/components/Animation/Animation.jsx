@@ -68,7 +68,7 @@ const Animation = () => {
           </div>
         </h2>
       </div>
-      <h2 className=" hidden md:flex  w-full items-center justify-center  mx-auto  text-white">
+      <h2 className=" hidden md:flex  w-screen items-center justify-center  mx-auto  text-white">
         <div className="mask mask-one items-center justify-end">
           <span data-show>Blockchain</span>
           <span>Deployment</span>
