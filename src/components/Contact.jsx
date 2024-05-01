@@ -7,15 +7,15 @@ import vector from '../app/vector-globe.svg'
 const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // const form = e.target
-    // const formData = new FormData(form)
-    // const response = await fetch('http://localhost:3000/v1/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(Object.fromEntries(formData))
-    // })
+    const form = e.target
+    const formData = new FormData(form)
+    const response = await fetch('http://localhost:3000/v1/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(Object.fromEntries(formData))
+    })
     // const data = await response.json()
     // console.log(data)
   }
