@@ -171,7 +171,6 @@ const Footer = () => {
 
             <ul className="flex flex-col gap-3 pt-2">
               <li className="button-small">Terms</li>
-              <li className="button-small">Privacy</li>
               <li className="button-small">
                 <a href="https://docs.k3-labs.com/introduction">
                   Documentation
