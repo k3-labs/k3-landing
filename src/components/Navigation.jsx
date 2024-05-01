@@ -7,39 +7,6 @@ import { Disclosure } from '@headlessui/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-// const Navigation = () => {
-//   return (
-// ;<nav className="flex max-w-6xl fixed justify-between items-center    w-full px-8 xl:w-[1151px] min-h-11 top-6  ">
-//   <Image priority src={logo} alt="Follow us on Twitter" />
-
-//   <ul className="flex flex-row justify-between items-center p-0 gap-10 ">
-//     <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-//       <a href="#">Home</a>
-//     </li>
-//     <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-//       <a href="#">Deploy</a>
-//     </li>
-//     <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-//       <a href="#">Design</a>
-//     </li>
-//     <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-//       <a href="#">Documentation</a>
-//     </li>
-//   </ul>
-//   <a
-//     className={
-//       'bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
-//     }
-//     href="https://app.k3-labs.com/"
-//   >
-//     Launch app
-//   </a>
-// </nav>
-//   )
-// }
-
-// export default Navigation
-
 export const scrollIntoView = (id) => {
   if (id === 'home') {
     window.scrollTo(0, 0, 'smooth')
@@ -47,7 +14,11 @@ export const scrollIntoView = (id) => {
   }
 
   const element = document.getElementById(id)
-  const y = element.getBoundingClientRect().top + window.scrollY - 100
+  const rect = element?.getBoundingClientRect()
+  if (!rect) return
+
+  const y = rect.top + window.scrollY - 100
+  console.log(y)
 
   window.scrollTo({ top: y, behavior: 'smooth' })
 }
@@ -87,17 +58,26 @@ export default function Example() {
               <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
                 <ul className="flex flex-row justify-between items-center p-0 gap-10 ">
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a href="#home" onClick={() => scrollIntoView('home')}>
+                    <a
+                      className="cursor-pointer"
+                      onClick={() => scrollIntoView('home')}
+                    >
                       Home
                     </a>
                   </li>
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a href="#deploy" onClick={() => scrollIntoView('deploy')}>
+                    <a
+                      className="cursor-pointer"
+                      onClick={() => scrollIntoView('deploy-nav')}
+                    >
                       Deploy
                     </a>
                   </li>
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a href="#home" onClick={() => scrollIntoView('design')}>
+                    <a
+                      className="cursor-pointer"
+                      onClick={() => scrollIntoView('design-nav')}
+                    >
                       Design
                     </a>
                   </li>
@@ -146,7 +126,7 @@ export default function Example() {
               className=" border-darkGray  w-[calc(100%-40px)] mx-auto  "
               onClick={() => {
                 close()
-                scrollIntoView('contact')
+                scrollIntoView('contact-nav')
               }}
               style={{
                 background:
@@ -158,7 +138,6 @@ export default function Example() {
             <ul className="bg-black  w-full flex flex-col justify-between items-center pb-12 gap-4 ">
               <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
-                  href="#home"
                   className="w-full"
                   onClick={() => {
                     close()
@@ -170,11 +149,10 @@ export default function Example() {
               </li>
               <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
-                  href="#deploy"
                   className="w-full"
                   onClick={() => {
                     close()
-                    scrollIntoView('deploy')
+                    scrollIntoView('deploy-nav')
                   }}
                 >
                   Deploy
@@ -182,11 +160,10 @@ export default function Example() {
               </li>
               <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
                 <a
-                  href="#design"
                   className="w-full"
                   onClick={() => {
                     close()
-                    scrollIntoView('design')
+                    scrollIntoView('design-nav')
                   }}
                 >
                   Design

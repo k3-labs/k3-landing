@@ -61,7 +61,7 @@ const Animation = () => {
   return (
     <>
       <div className="mx-auto md:hidden w-full max-w-7xl  ">
-        <h2 className="  flex flex-col items-center text-[40px] gap-2    text-white bottom-20">
+        <h2 className="  flex flex-col items-center text-[48px] gap-2    text-white bottom-20">
           Blockchain.
           <div>
             <span className="text-blue"> Made</span>.Simple.

@@ -7,10 +7,11 @@ import github from '@/components/icons/socials/github.svg'
 import telegram from '@/components/icons/socials/telegram.svg'
 import twitter from '@/components/icons/socials/twitter.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className="w-full bg-blackLight">
+    <div className="w-screen bg-blackLight">
       <div className="md:py-12 md:px-16  flex flex-col md:flex-row  max-w-7xl   mx-auto  gap-16 bg-transparent">
         <div className="flex py-6 px-5 md:p-0 flex-col gap-8  md:w-80  ">
           <Image src={logo} alt="K3-Lab" className="py-4 w-20 md:w-32" />
@@ -24,22 +25,34 @@ const Footer = () => {
             <h4 className="button  text-gray">Product</h4>
             <ul className="flex flex-col gap-3">
               <li className="button-small">
-                <a href="#home" onClick={() => scrollIntoView('home')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('home')}
+                >
                   Home
                 </a>
               </li>
               <li className="button-small">
-                <a href="#deploy" onClick={() => scrollIntoView('deploy')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('deploy-nav')}
+                >
                   Deploy
                 </a>
               </li>
               <li className="button-small">
-                <a href="#design" onClick={() => scrollIntoView('design')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('design-nav')}
+                >
                   Design
                 </a>
               </li>
               <li className="button-small">
-                <a href="#home" onClick={() => scrollIntoView('contact')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('contact-nav')}
+                >
                   Become a design partner
                 </a>
               </li>
@@ -62,8 +75,9 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h4 className="button text-gray">Resources</h4>
             <ul className="flex flex-col gap-3">
-              <li className="button-small">Terms</li>
-              <li className="button-small">Privacy</li>
+              <li className="button-small">
+                <Link href="/tos">Terms</Link>
+              </li>
               <li className="button-small">
                 <a href="https://docs.k3-labs.com/introduction">
                   Documentation
@@ -90,22 +104,34 @@ const Footer = () => {
 
             <ul className="flex flex-col gap-3 pt-2">
               <li className="button-small">
-                <a href="#home" onClick={() => scrollIntoView('home')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('home')}
+                >
                   Home
                 </a>
               </li>
               <li className="button-small">
-                <a href="#deploy" onClick={() => scrollIntoView('deploy')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('deploy-nav')}
+                >
                   Deploy
                 </a>
               </li>
               <li className="button-small">
-                <a href="#design" onClick={() => scrollIntoView('design')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('design-nav')}
+                >
                   Design
                 </a>
               </li>
               <li className="button-small">
-                <a href="#contact" onClick={() => scrollIntoView('contact')}>
+                <a
+                  className="cursor-pointer"
+                  onClick={() => scrollIntoView('contact-nav')}
+                >
                   Become a design partner
                 </a>
               </li>

@@ -112,7 +112,7 @@ const MobileStepper = () => {
           ))}
         </ol>
       </nav>
-      <p className="caption line-clamp-2 absolute top-12 text-white text-center">
+      <p className="caption line-clamp-2 h-8 absolute top-12 text-white text-center">
         {steps?.[currentStep]?.content}
       </p>
     </div>

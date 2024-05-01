@@ -20,8 +20,10 @@ const Contact = () => {
     // console.log(data)
   }
   return (
-    <div className="mx-5 w-[calc(100%-40px)] md:w-full relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl lg:min-w-[50rem] md:mx-20 xl:w-[72rem]">
-      <div className="flex flex-col gap-12 md:pl-8 md:py-12 pb-10 pt-16 px-4 xl:w-[72rem]">
+    <div className="mx-5 md:mx-0 w-[calc(100%-40px)] md:w-full  relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl  ">
+      <div className=" invisible" id="contact-nav" />
+
+      <div className="flex flex-col gap-12 md:pl-8 md:py-12 pb-10 pt-16 px-4 ">
         <div className="flex flex-col justify-between gap-4 w-full">
           <h3 id="contact">Connect with us</h3>
           <p className="body-2 text-[14px] md:text-[16px] w-5/6">
@@ -74,11 +76,11 @@ const Contact = () => {
         </form>
       </div>
       <div
-        className="w-full h-full md:h-[730px] absolute left-24  md:-right-40 -top-60 md:-top-24 opacity-80  flex-grow"
+        className="w-full h-full md:h-[730px] md:w-[520px] absolute left-28 md:left-auto  md:-right-[70px] -top-64 md:top-[0px] opacity-80  flex-grow"
         style={{
           backgroundImage: `url(${vector.src})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
+          backgroundRepeat: 'no-repeat'
+          // backgroundSize: 'cover'
         }}
       />
 
@@ -87,7 +89,7 @@ const Contact = () => {
         alt="eclipse"
         width={420}
         height={400}
-        className="absolute opacity-40 hidden md:block md:bottom-[50px] md:left-[600px] "
+        className="absolute opacity-40 hidden md:block md:bottom-[50px] md:left-[730px] "
       />
     </div>
   )

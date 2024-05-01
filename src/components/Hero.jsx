@@ -32,7 +32,7 @@ const cards = [
 const Hero = () => {
   return (
     <div
-      className=" w-full lg:max-h-[1080px] lg:h-[calc(100vh-80px)] pt-20 md:pt-[250px]  "
+      className=" w-screen lg:max-h-[1080px] h-screen lg:h-[calc(100vh-80px)] pt-20 md:pt-[250px]  "
       style={{
         backgroundImage: `url(${vector.src})`,
         backgroundRepeat: 'no-repeat',
@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="flex gap-6  md:gap-8  flex-col  items-center max-w-7xl mx-auto">
         <Animation />
 
-        <p className="align-center text-sm   mx-5 md:text-[20px] max-w-6xl text-center md:leading-[34px] font-normal">
+        <p className="align-center text-base   mx-5 md:text-[20px] max-w-6xl text-center md:leading-[34px] font-normal">
           Easily design and deploy business workflows and applications that
           utilize the power of decentralized compute, storage, and execution.
         </p>
@@ -59,7 +59,7 @@ const Hero = () => {
           </a>
           <Button
             className=" border-darkGray md:button bg-darkGray/80 "
-            onClick={() => scrollIntoView('contact')}
+            onClick={() => scrollIntoView('contact-nav')}
             // style={{
             //   background:
             //     'linear-gradient(171deg, rgba(255, 255, 255, 0.09) 36.08%, rgba(255, 255, 255, 0.072) 86.19%)'

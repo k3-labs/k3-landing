@@ -17,7 +17,14 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+      },
+      maxWidth: {
+        '6xl': '74rem'
       }
+    },
+    screens: {
+      xs: '400px',
+      ...defaultTheme.screens
     },
 
     colors: {
@@ -42,5 +49,5 @@ module.exports = {
       yellow: '#FE9402'
     }
   },
-  plugins: [require('tailwind-scrollbar')]
+  plugins: [require('tailwind-scrollbar'), require('@tailwindcss/typography')]
 }

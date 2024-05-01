@@ -3,15 +3,16 @@ import Pricing from '@/components/Pricing'
 import Stepper from '@/components/Stepper'
 import Image from 'next/image'
 import { useEffect } from 'react'
+import image from '../app/Platform_Concept.png'
 import eclipse from '../app/eclipse.svg'
-import image from '../app/image.svg'
 import designIcon from './icons/design-icon.svg'
 
 const Design = () => {
   useEffect(() => {
     const checkScroll = () => {
       const designHeader = document.getElementById('design')
-      const rect = designHeader.getBoundingClientRect()
+      const rect = designHeader?.getBoundingClientRect()
+      if (!rect) return
 
       if (rect.top <= 300) {
         const firstStep = document.getElementById('design-step-0')
@@ -52,8 +53,8 @@ const Design = () => {
   }, [])
 
   return (
-    <div className="mx-5   flex flex-col  items-center">
-      <div className="flex gap-8 mb-16 flex-col max-w-3xl  items-center ">
+    <div id="design-nav" className="mx-5  md:mx-0  flex flex-col  items-center">
+      <div className="flex gap-8 mb-16 md:mb-0 flex-col max-w-3xl  items-center ">
         <div className="flex gap-x-2 items-center ">
           <Image src={designIcon} alt="icon" width={40} height={40} />
           <h3 id="design">Design</h3>
@@ -74,7 +75,7 @@ const Design = () => {
           </p>
         </div>
       </div>
-      <div className=" w-full relative  justify-between items-center max-w-6xl flex flex-col-reverse md:flex-row md:overflow-hidden  mb-36 md:mb-0 md:h-[600px] ">
+      <div className=" w-full relative  justify-between items-center max-w-6xl flex flex-col-reverse md:flex-row md:overflow-hidden  mb-36 md:mb-0 md:h-[550px] ">
         <div className="md:w-[32%] pt-10 md:pt-0">
           <Stepper />
         </div>
@@ -93,7 +94,11 @@ const Design = () => {
             <span className="rounded-full w-1 h-1 md:h-[8.8px] md:w-[8.8px] bg-yellow" />
             <span className="rounded-full w-1 h-1 md:h-[8.8px] md:w-[8.8px] bg-greenDark" />
           </div>
-          <Image src={image} alt="image" className="w-fit p-2   rounded-xl  " />
+          <Image
+            src={image}
+            alt="image"
+            className="w-fit  md:w-[650px] p-2   rounded-xl  "
+          />
         </div>
       </div>
       <Pricing />

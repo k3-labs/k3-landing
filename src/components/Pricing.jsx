@@ -7,7 +7,7 @@ import saas from './icons/saas.svg'
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col relative bottom-16 mt-20 rounded-2xl border border-darkGray   max-w-6xl md:mx-20">
+    <div className="flex flex-col w-full relative bottom-16 mt-20 rounded-2xl border border-darkGray   max-w-6xl ">
       <div className="grid grid-cols-1 md:grid-cols-4  ">
         <div className="flex flex-col p-4 md:p-6 md:border-r border-darkGray gap-3">
           <Image src={diamond} alt="icon" className="w-6 h-8 md:w-8 md:h-8" />

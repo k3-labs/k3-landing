@@ -6,7 +6,7 @@ import web2Icon from './icons/web2-icon.svg'
 
 const About = () => {
   return (
-    <div className="mx-5  max-w-6xl md:mx-20 flex flex-col items-center">
+    <div className="mx-5 md:mx-0 max-w-6xl flex flex-col items-center">
       <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl border border-darkGray  ">
         <div className="flex justify-between items-center md:col-span-12 p-4 md:py-8 md:px-6">
           <h4 className="text-[16px] md:text-[28px] text-gray">
