@@ -51,7 +51,7 @@ export default function Example() {
               <Image
                 priority
                 src={logo}
-                className="w-20 md:w-32"
+                className="w-20 md:w-32 relative z-20"
                 alt="Follow us on Twitter"
               />
 

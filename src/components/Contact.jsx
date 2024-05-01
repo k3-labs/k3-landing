@@ -23,7 +23,7 @@ const Contact = () => {
     <div className="mx-5 md:mx-0 w-[calc(100%-40px)] md:w-full  relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl  ">
       <div className=" invisible" id="contact-nav" />
 
-      <div className="flex flex-col gap-12 md:pl-8 md:py-12 pb-10 pt-16 px-4 ">
+      <div className="flex flex-col gap-12 md:pl-8 md:py-12 pb-10 pt-16 px-4 relative z-20 ">
         <div className="flex flex-col justify-between gap-4 w-full">
           <h3 id="contact">Connect with us</h3>
           <p className="body-2 text-[14px] md:text-[16px] w-5/6">

@@ -32,7 +32,7 @@ const cards = [
 const Hero = () => {
   return (
     <div
-      className=" w-screen lg:max-h-[1080px] h-screen lg:h-[calc(100vh-80px)] pt-20 md:pt-[250px]  "
+      className=" w-[calc(100vw-12px)] lg:max-h-[1080px] h-screen lg:h-[calc(100vh-80px)] pt-20 md:pt-[250px]  "
       style={{
         backgroundImage: `url(${vector.src})`,
         backgroundRepeat: 'no-repeat',
