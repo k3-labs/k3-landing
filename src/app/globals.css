@@ -24,13 +24,6 @@ we still enforce color-scheme: dark, despite the user preference */
   }
 }
 
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
 @layer base {
   h1 {
     @apply text-7xl leading-[1.4] tracking-[-2%] font-medium;
@@ -50,6 +43,13 @@ details > summary::-webkit-details-marker {
 }
 
 @layer components {
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
   .body-1 {
     @apply font-normal   text-xl leading-[170%];
   }
