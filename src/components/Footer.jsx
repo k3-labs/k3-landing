@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className="w-[calc(100vw-12px)] bg-blackLight">
+    <div className="w-full md:w-[calc(100vw-12px)] bg-blackLight">
       <div className="md:py-12 md:px-16  flex flex-col md:flex-row  max-w-7xl   mx-auto  gap-16 bg-transparent">
         <div className="flex py-6 px-5 md:p-0 flex-col gap-8  md:w-80  ">
           <Image src={logo} alt="K3-Lab" className="py-4 w-20 md:w-32" />
