@@ -20,10 +20,10 @@ export default function Legal() {
       <article className="max-w-6xl py-8 mx-auto  prose prose-invert">
         <h1>BETA TESTING TERMS OF SERVICE</h1>
         <h4>
-          BY CLICKING ON THE "YES" OR “I ACCEPT” BUTTON (OR OTHER BUTTON OR
-          MECHANISM DESIGNED TO ACKNOWLEDGE AGREEMENT TO THE TERMS OF THIS
-          AGREEMENT), OR BY ACCESSING OR USING THE BETA SERVICE, YOU ARE
-          CONSENTING TO BE BOUND BY THIS AGREEMENT.
+          BY CLICKING ON THE &quot;YES&quot; OR &ldquo;I ACCEPT&rdquo; BUTTON
+          (OR OTHER BUTTON OR MECHANISM DESIGNED TO ACKNOWLEDGE AGREEMENT TO THE
+          TERMS OF THIS AGREEMENT), OR BY ACCESSING OR USING THE BETA SERVICE,
+          YOU ARE CONSENTING TO BE BOUND BY THIS AGREEMENT.
         </h4>
         <h4 className=" mt-[1em] mb-[3em]">
           This Beta Test Agreement (the “Agreement”) is by and between K3 Labs,
