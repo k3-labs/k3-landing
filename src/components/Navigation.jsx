@@ -82,7 +82,10 @@ export default function Example() {
                     </a>
                   </li>
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a href="https://docs.k3-labs.com/introduction">
+                    <a
+                      href="https://docs.k3-labs.com/introduction"
+                      target="_blank"
+                    >
                       Documentation
                     </a>
                   </li>
@@ -173,6 +176,7 @@ export default function Example() {
                 <a
                   href="https://docs.k3-labs.com/introduction"
                   className="w-full"
+                  target="_blank"
                 >
                   Documentation
                 </a>

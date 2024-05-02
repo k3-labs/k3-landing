@@ -79,7 +79,7 @@ const Footer = () => {
                 <Link href="/tos">Terms</Link>
               </li>
               <li className="button-small">
-                <a href="https://docs.k3-labs.com/introduction">
+                <a href="https://docs.k3-labs.com/introduction" target="_blank">
                   Documentation
                 </a>
               </li>
@@ -170,9 +170,11 @@ const Footer = () => {
             </summary>
 
             <ul className="flex flex-col gap-3 pt-2">
-              <li className="button-small">Terms</li>
               <li className="button-small">
-                <a href="https://docs.k3-labs.com/introduction">
+                <Link href="/tos">Terms</Link>
+              </li>
+              <li className="button-small">
+                <a href="https://docs.k3-labs.com/introduction" target="_blank">
                   Documentation
                 </a>
               </li>
