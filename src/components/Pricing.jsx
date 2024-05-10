@@ -36,7 +36,7 @@ const Pricing = () => {
 
           <p className="body-3 ">
             Interoperate with any public or private EVM chain through simple web
-            forms and single
+            forms and single-click deployments
           </p>
         </div>
       </div>
