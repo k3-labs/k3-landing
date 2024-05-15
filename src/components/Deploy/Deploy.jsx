@@ -25,7 +25,7 @@ const Deploy = () => {
             Future-proof your builds by leveraging the inherent security and
             scalability of restaking.{' '}
             <span className="text-purple">Typescript</span>, and{' '}
-            <span className="text-purple">Javascript</span> coming soon.
+            <span className="text-purple">Python</span> coming soon.
           </p>
         </div>
       </div>
