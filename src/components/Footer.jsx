@@ -56,6 +56,9 @@ const Footer = () => {
                   Become a design partner
                 </a>
               </li>
+              <li className="button-small">
+                <Link href="/onboarding">Operator Onboarding Page</Link>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col gap-4">
