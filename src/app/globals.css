@@ -37,6 +37,9 @@ we still enforce color-scheme: dark, despite the user preference */
   h4 {
     @apply text-[20px] md:text-[28px]   leading-[1.4] tracking-[-1%] font-medium;
   }
+  h5 {
+    @apply text-[18px] md:text-[24px]   leading-[1.4] tracking-[-1%] font-medium;
+  }
   p {
     @apply m-0;
   }

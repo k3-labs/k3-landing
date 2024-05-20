@@ -16,7 +16,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        code: ['Menlo', ...defaultTheme.fontFamily.mono]
       },
       maxWidth: {
         '6xl': '74rem'
