@@ -9,15 +9,18 @@ const Contact = () => {
     e.preventDefault()
     const form = e.target
     const formData = new FormData(form)
-    const response = await fetch('http://localhost:3000/v1/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(Object.fromEntries(formData))
-    })
-    // const data = await response.json()
-    // console.log(data)
+    const response = await fetch(
+      'https://k3-backend-bcg2tu5n4q-uc.a.run.app/v1/contact',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      }
+    )
+    const data = await response.json()
+    console.log(data)
   }
   return (
     <div className="mx-5 md:mx-0 w-[calc(100%-40px)] md:w-full  relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl  ">
