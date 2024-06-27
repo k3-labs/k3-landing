@@ -4,6 +4,7 @@ import Deploy from '@/components/Deploy/Deploy'
 import Design from '@/components/Design'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
+import Investors from '@/components/Investors'
 import Navigation from '@/components/Navigation'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Deploy />
       <About />
       <Design />
+      <Investors />
       <Contact />
       <Footer />
     </main>

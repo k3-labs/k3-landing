@@ -1,26 +1,38 @@
 'use client'
+
 import Button from '@/components/Button'
 import Image from 'next/image'
+import { useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 import eclipse from '../app/eclipse.svg'
 import vector from '../app/vector-globe.svg'
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [result, setResult] = useState('none')
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const form = e.target
-    const formData = new FormData(form)
-    const response = await fetch(
-      'https://k3-backend-bcg2tu5n4q-uc.a.run.app/v1/contact',
-      {
+    setIsLoading(true)
+    setResult('none')
+    try {
+      e.preventDefault()
+      const form = e.target
+      const formData = new FormData(form)
+      await fetch('https://k3-backend-bcg2tu5n4q-uc.a.run.app/v1/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(Object.fromEntries(formData))
-      }
-    )
-    const data = await response.json()
-    console.log(data)
+      })
+
+      setIsLoading(false)
+      setResult('success')
+    } catch (error) {
+      console.log(error)
+      setResult('error')
+      setIsLoading(false)
+    }
   }
   return (
     <div className="mx-5 md:mx-0 w-[calc(100%-40px)] md:w-full  relative rounded-2xl overflow-hidden border border-darkGray max-w-6xl  ">
@@ -73,9 +85,23 @@ const Contact = () => {
               />
             </div>
           </div>
-          <Button className="bg-blue self-center md:self-start border-none py-3 px-4  ">
-            Submit form
-          </Button>
+          <div className="flex gap-2 items-center">
+            <Button
+              disabled={isLoading}
+              className={twMerge(
+                'bg-blue self-center md:self-start border-none py-3 px-4 hover:bg-blue/80',
+                isLoading && 'animate-pulse cursor-not-allowed'
+              )}
+            >
+              {isLoading ? 'Sending...' : 'Submit form'}
+            </Button>
+            {result === 'success' && (
+              <p className="text-green">Your message has been sent</p>
+            )}
+            {result === 'error' && (
+              <p className="text-red">An error occured, please try again</p>
+            )}
+          </div>
         </form>
       </div>
       <div
