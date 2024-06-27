@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Investors = () => {
   return (
-    <div className="mx-5 md:mx-0 max-w-6xl flex flex-col items-center">
+    <div className="mx-5 md:mx-0 mb-16 max-w-6xl flex flex-col items-center">
       <h3 className="text-center  font-semibold leading-8 text-white">
         Our investors
       </h3>
