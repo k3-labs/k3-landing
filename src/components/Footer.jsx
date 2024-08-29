@@ -6,6 +6,7 @@ import logo from '@/components/icons/logo-white.svg'
 import github from '@/components/icons/socials/github.svg'
 import telegram from '@/components/icons/socials/telegram.svg'
 import twitter from '@/components/icons/socials/twitter.svg'
+import youtube from '@/components/icons/socials/youtube.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -72,6 +73,9 @@ const Footer = () => {
               </li>
               <li className="button-small">
                 <a href="https://github.com/k3-labs">GitHub</a>
+              </li>
+              <li className="button-small">
+                <a href="https://www.youtube.com/@k3-labs">Youtube</a>
               </li>
             </ul>
           </div>
@@ -160,6 +164,9 @@ const Footer = () => {
               <li className="button-small">
                 <a href="https://github.com/k3-labs">GitHub</a>
               </li>
+              <li className="button-small">
+                <a href="https://www.youtube.com/@k3-labs">Youtube</a>
+              </li>
             </ul>
           </details>
           <details className="px-5 py-3 group">
@@ -188,7 +195,7 @@ const Footer = () => {
       <div className=" h-20 border-t  border-darkGray">
         <div className="  px-5 md:px-16  max-w-7xl  h-full  mx-auto  flex  items-center justify-between ">
           <p className="button-small">© 2024 K3 Labs</p>
-          <div className="flex gap-4 ">
+          <div className="flex gap-4 items-center ">
             <a href="https://twitter.com/k3_labs">
               <Image
                 src={twitter}
@@ -211,6 +218,14 @@ const Footer = () => {
                 src={github}
                 width={16}
                 height={16}
+                alt="Follow us on Github"
+              />
+            </a>
+            <a href="https://www.youtube.com/@k3-labs">
+              <Image
+                src={youtube}
+                width={22}
+                height={22}
                 alt="Follow us on Github"
               />
             </a>
