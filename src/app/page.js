@@ -12,9 +12,9 @@ export default function Home() {
     <main className=" overflow-x-hidden bg-transparent text-white  flex min-h-screen w-full md:w-[calc(100vw-12px]  flex-col items-center gap-y-16 md:gap-y-32 md:px-20  ">
       <Navigation />
       <Hero />
+      <Design />
       <Deploy />
       <About />
-      <Design />
       <Investors />
       <Contact />
       <Footer />
