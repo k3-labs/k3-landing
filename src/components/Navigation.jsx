@@ -83,6 +83,14 @@ export default function Example() {
                   </li>
                   <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
                     <a
+                      className="cursor-pointer"
+                      onClick={() => scrollIntoView('contact-nav')}
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
+                    <a
                       href="https://docs.k3-labs.com/introduction"
                       target="_blank"
                     >
