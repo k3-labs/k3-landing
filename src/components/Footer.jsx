@@ -188,6 +188,11 @@ const Footer = () => {
                   Documentation
                 </a>
               </li>
+              <li className="button-small">
+                <a href="https://network.k3-labs.com/" target="_blank">
+                  Network/Operator Status
+                </a>
+              </li>
             </ul>
           </details>
         </div>
