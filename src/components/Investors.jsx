@@ -1,26 +1,29 @@
 import Image from 'next/image'
-import aztlan from '../assets/aztlan.png'
-import bff from '../assets/bff.png'
+import aztlan from '../assets/aztlan.svg'
+import bff from '../assets/bff.svg'
 import cubist from '../assets/cubist.png'
 import eigenlayer from '../assets/eigenlayer.png'
-import finality from '../assets/finality.png'
+import finality from '../assets/finality.svg'
 import novanet from '../assets/nova-net.png'
 import othenthic from '../assets/othenthic.png'
 import stability from '../assets/stability.svg'
-import uniblock from '../assets/uniblock.png'
+import uniblock from '../assets/uniblock.svg'
 
 const Investors = () => {
   return (
     <div className="bg-[#FBFBFB] p-12 md:p-14 lg:p-[120px]  ">
-      <div className="flex  justify-center w-full  gap-12 flex-wrap">
-        <Image src={bff} alt="bbf-logo" height={75} />
-        <Image src={finality} alt="finality-logo" height={75} />
+      <div className="flex  justify-center items-center w-full  gap-12 flex-wrap  ">
+        <Image src={bff} alt="bbf-logo" height={80} />
+        <Image src={finality} alt="finality-logo" height={80} />
         <Image src={eigenlayer} alt="eigenlayer-logo" height={75} />
-        <Image src={aztlan} alt="aztlan-logo" height={75} />
-        <Image src={novanet} alt="nova-net-logo" height={75} />
-        <Image src={stability} alt="stability-logo" height={45} />
+
+        <Image src={stability} alt="stability-logo" height={40} />
+        <div className="flex items-center h-[38px] ">
+          <Image src={uniblock} alt="uniblock-logo" height={40} />
+        </div>
+        <Image src={novanet} alt="nova-net-logo" height={95} />
         <div className="flex gap-2 items-center">
-          <Image src={cubist} alt="cubist-logo" height={60} />
+          <Image src={cubist} alt="cubist-logo" height={50} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="8.26rem"
@@ -38,10 +41,11 @@ const Investors = () => {
             ></path>
           </svg>
         </div>
-        <Image src={uniblock} alt="uniblock-logo" height={75} />
-        <div className="flex gap-1 items-center">
-          <Image src={othenthic} alt="othenthic-logo" height={50} />
-          <h5 className="text-grayText text-4xl font-medium leading-5 -tracking-[0.07px]">
+        <Image src={aztlan} alt="aztlan-logo" height={90} />
+
+        <div className="flex gap-2 items-center">
+          <Image src={othenthic} alt="othenthic-logo" height={40} />
+          <h5 className="text-blackLight text-3xl font-medium leading-5 -tracking-[0.07px]">
             Othenthic
           </h5>
         </div>

@@ -101,7 +101,7 @@ const About = () => {
               </span>
               <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
                 By interoperating with any public or private chain or adding
-                custom
+                custom functions
               </p>
             </div>
           </div>

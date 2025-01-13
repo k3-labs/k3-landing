@@ -79,7 +79,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col border-t border-whiteStroke justify-center items-center p-6 lg:py-12 gap-2 md:flex-row md:justify-between ">
+      <div className="flex flex-col border-t border-whiteStroke justify-center items-center p-6 lg:py-8 gap-2 md:flex-row md:justify-between ">
         <span className="text-grayText text-xs leading-[16.8px] -tracking-[0.12px]">
           © 2025 K3-Labs Ltd. All rights reserved.
         </span>

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 import { Button } from '@headlessui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import myImage from '../app/workflow-background.svg'
 import autoClaimRewards from '../assets/auto-claim.png'
@@ -60,8 +60,30 @@ const Templates = {
 
 const Features = () => {
   const [selectedTemplate, setSelectedTemplate] = useState(
-    Templates.AutomateTrading
+    Templates.AutomateWalletOperations
   )
+  const [manual, setManual] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const keys = Object.entries(Templates)
+
+      setSelectedTemplate((template) => {
+        const index = keys.findIndex((t) => {
+          return t[1].title === template.title
+        })
+        if (index === keys.length - 1) {
+          return Templates[keys[0][0]]
+        }
+        return Templates[keys[index + 1][0]]
+      })
+    }, 5000)
+    if (manual) {
+      clearInterval(interval)
+    }
+    return () => clearInterval(interval) // Cleanup function to clear interval
+  }, [manual])
+
   return (
     <div className="w-full  border-b border-b-whiteStroke  ">
       <div className="flex flex-col gap-5  mx-auto  ">
@@ -148,7 +170,10 @@ const Features = () => {
                   'text-blackLight text-sm font-medium leading-5 items-center hover:bg-whiteSurface relative flex gap-2 h-[46px] w-fit lg:w-[235px] p-[9px]  rounded-[7px]  bg-white ',
                   selectedTemplate === value && 'text-blue md:text-blackLight '
                 )}
-                onClick={() => setSelectedTemplate(value)}
+                onClick={() => {
+                  setManual(true)
+                  setSelectedTemplate(value)
+                }}
               >
                 <Image
                   src={value.src}
