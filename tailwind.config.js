@@ -48,6 +48,7 @@ module.exports = {
       red: '#E7484E',
       rose: '#FF0080',
       whiteStroke: '#F5F5F5',
+      whiteSurface: '#FBFBFB',
       // white: '#FBFFF1',
       yellow: '#FE9402'
     }

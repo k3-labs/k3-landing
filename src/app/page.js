@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <main className="  bg-transparent text-black  max-w-[1390px] min-h-screen w-full  mx-auto xl:border-x border-x-whiteStroke">
+    <main className="  bg-transparent text-black  max-w-[1390px] min-h-screen w-full  mx-auto lg:border-x border-x-whiteStroke">
       <Navigation />
       <Hero />
       <Features />

@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      className={`scrollbar-thin scrollbar-track-gray scrollbar-thumb-gray-darkGray text-black `}
+      className={`scrollbar-thin scrollbar-track-[#F5F5F5] scrollbar-thumb-gray text-black `}
       lang="en"
     >
       <head>

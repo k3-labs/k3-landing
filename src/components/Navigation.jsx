@@ -3,7 +3,6 @@ import hamburger from '@/components/icons/hamburger.svg'
 import logo from '@/components/icons/logo-black.svg'
 import x from '@/components/icons/x.svg'
 import {
-  Button,
   Disclosure,
   DisclosureButton,
   DisclosurePanel
@@ -42,28 +41,34 @@ export default function Example() {
 
   return (
     <Disclosure as="nav" className="w-screen h-fit fixed inset-0 z-50 ">
-      {({ open }) => (
+      {({ open, close }) => (
         <>
           <div className="w-full fixed  border-b border-whiteStroke">
             <nav className=" bg-white h-[72px] py-[18px]  max-w-[1390px] mx-auto  px-6 flex justify-between items-center  ">
-              <Image priority src={logo} alt="K3 Labs logo" />
-              <div className="hidden md:flex md:items-center xl:grow xl:justify-between xl:px-[50px] ">
+              <Image
+                priority
+                src={logo}
+                alt="K3 Labs logo"
+                className="cursor-pointer"
+                onClick={() => scrollIntoView('home')}
+              />
+              <div className="hidden md:flex md:items-center lg:grow lg:justify-between lg:px-[50px] ">
                 <div className=" flex items-center   ">
                   <a
                     className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
-                    onClick={() => scrollIntoView('home')}
+                    onClick={() => scrollIntoView('automate')}
                   >
                     Automate
                   </a>
                   <a
                     className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
-                    onClick={() => scrollIntoView('home')}
+                    onClick={() => scrollIntoView('innovate')}
                   >
                     Innovate
                   </a>
                   <a
                     className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
-                    onClick={() => scrollIntoView('home')}
+                    onClick={() => scrollIntoView('examples')}
                   >
                     Examples
                   </a>
@@ -71,13 +76,13 @@ export default function Example() {
                 <div className=" flex items-center  ">
                   <a
                     className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
-                    onClick={() => scrollIntoView('home')}
+                    onClick={() => scrollIntoView('connect')}
                   >
                     Contact Us
                   </a>
                   <a
+                    href="https://k3-labs.gitbook.io"
                     className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
-                    onClick={() => scrollIntoView('home')}
                   >
                     Docs
                   </a>
@@ -85,7 +90,7 @@ export default function Example() {
               </div>
               <div className="flex items-center gap-6">
                 <a
-                  href="#"
+                  href="https://app.k3-labs.com/"
                   className={twMerge(
                     'bg-blackLight border border-darkGray rounded-lg  leading-5 h-9 py-2 px-[15px] flex items-center text-[#F3F4F6] text-[15px] font-medium ',
                     open && 'hidden'
@@ -105,21 +110,48 @@ export default function Example() {
           </div>
           <DisclosurePanel className="  mt-[72px] w-full h-screen ">
             <div className="flex flex-col gap-2 pb-4 items-start justify-center bg-white ">
-              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none  font-medium text-[#2E3238]">
+              <a
+                className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]"
+                onClick={() => {
+                  scrollIntoView('automate')
+                  close()
+                }}
+              >
                 Automate
-              </Button>
-              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none marker:font-medium text-[#2E3238]">
+              </a>
+              <a
+                className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]"
+                onClick={() => {
+                  scrollIntoView('innovate')
+                  close()
+                }}
+              >
                 Innovate
-              </Button>
-              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+              </a>
+              <a
+                className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]"
+                onClick={() => {
+                  scrollIntoView('examples')
+                  close()
+                }}
+              >
                 Examples
-              </Button>
-              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+              </a>
+              <a
+                className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]"
+                onClick={() => {
+                  scrollIntoView('connect')
+                  close()
+                }}
+              >
                 Contact Us
-              </Button>
-              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+              </a>
+              <a
+                className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]"
+                href="https://k3-labs.gitbook.io"
+              >
                 Docs
-              </Button>
+              </a>
             </div>
             <div
               className="h-full bg-black bg-opacity-20"

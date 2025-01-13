@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 export default function Legal() {
   return (
-    <div className="px-12 py-6  text-gray-300 overflow-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-700 h-screen  ">
+    <div className="px-12 py-6  text-grayText overflow-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-gray-700 h-screen  ">
       <Link
         href="/"
         type="button"
-        className="inline-flex items-center gap-x-1.5 rounded-md outline outline-darkGray  px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blackLight "
+        className="inline-flex items-center gap-x-1.5 rounded-md border border-whiteStroke  px-3 py-2 text-sm font-semibold text-grayText shadow-sm hover:bg-[#FBFBFB] "
       >
         <Image
           src={arrowUp}
@@ -17,7 +17,7 @@ export default function Legal() {
         />{' '}
         Back to Home
       </Link>
-      <article className="max-w-6xl py-8 mx-auto  prose prose-invert">
+      <article className="max-w-6xl py-8 mx-auto  prose ">
         <h1>K3 FRAMEWORK TERMS AND CONDITIONS</h1>
         <h2>OVERVIEW</h2>
         <p>
