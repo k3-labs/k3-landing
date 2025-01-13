@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import aztlan from '../assets/aztlan.png'
 import bff from '../assets/bff.png'
-import cubist from '../assets/cubist.svg'
+import cubist from '../assets/cubist.png'
 import eigenlayer from '../assets/eigenlayer.png'
 import finality from '../assets/finality.png'
 import novanet from '../assets/nova-net.png'
@@ -20,7 +20,7 @@ const Investors = () => {
         <Image src={novanet} alt="nova-net-logo" height={75} />
         <Image src={stability} alt="stability-logo" height={45} />
         <div className="flex gap-2 items-center">
-          <Image src={cubist} alt="cubist-logo" height={45} />
+          <Image src={cubist} alt="cubist-logo" height={60} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="8.26rem"

@@ -7,7 +7,7 @@ import twitter from '../assets/twitter.svg'
 const Connect = () => {
   return (
     <div>
-      <div className="py-12 px-6 md:px-16 lg:px-5 border-y border-whiteStroke">
+      <div className="py-12 px-6 md:px-16 lg:px-5 border-y lg:border-b-0 border-whiteStroke">
         <h2
           className="text-[28px] font-semibold leading-[40px]  text-grayText -tracking-[0.4px]"
           id="connect"

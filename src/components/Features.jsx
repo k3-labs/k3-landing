@@ -88,8 +88,9 @@ const Features = () => {
           Automate
         </a>
         <p className="m-0 text-[#8F99A8] max-w-[640px] text-xl lg:text-3xl font-medium leading-[30px] lg:leading-10 -tracking-[0.4px]">
-          <span className="text-blackLight">A simple</span>,{' '}
-          <span className="text-blackLight"> template driven approach to</span>{' '}
+          <span className="text-blackLight">
+            A simple, template driven approach to
+          </span>{' '}
           building <span className="text-blackLight"> Web3</span> automations
           workflows that read and write between on and off-chain data sources,
           and instantly trigger processes or alerts.
