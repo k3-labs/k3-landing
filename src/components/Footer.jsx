@@ -77,6 +77,7 @@ const Footer = () => {
           >
             GitHub
           </a>
+       
         </div>
       </div>
       <div className="flex flex-col border-t border-whiteStroke justify-center items-center p-6 lg:py-8 gap-2 md:flex-row md:justify-between ">
