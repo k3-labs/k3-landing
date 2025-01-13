@@ -29,9 +29,10 @@ module.exports = {
     },
 
     colors: {
+      ...require('tailwindcss/colors'),
       transparent: 'transparent',
       current: 'currentColor',
-      black: '#010101',
+      grayText: '#454545',
       blackLight: '#1A1A1A',
       blue: '#0070F3',
       blueLight: '#4886D0',
@@ -46,7 +47,9 @@ module.exports = {
       purple: '#9341D5',
       red: '#E7484E',
       rose: '#FF0080',
-      white: '#FBFFF1',
+      whiteStroke: '#F5F5F5',
+      whiteSurface: '#FBFBFB',
+      // white: '#FBFFF1',
       yellow: '#FE9402'
     }
   },

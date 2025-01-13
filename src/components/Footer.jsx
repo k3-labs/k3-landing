@@ -1,240 +1,94 @@
 'use client'
 
 import { scrollIntoView } from '@/components/Navigation'
-import arrowUp from '@/components/icons/arrow-up.svg'
-import logo from '@/components/icons/logo-white.svg'
-import github from '@/components/icons/socials/github.svg'
-import telegram from '@/components/icons/socials/telegram.svg'
-import twitter from '@/components/icons/socials/twitter.svg'
-import youtube from '@/components/icons/socials/youtube.svg'
-import Image from 'next/image'
 import Link from 'next/link'
+
+// import logo from '@/components/icons/logo-white.svg'
 
 const Footer = () => {
   return (
-    <div className="w-full md:w-screen bg-blackLight">
-      <div className="md:py-12 md:px-16  flex flex-col md:flex-row  max-w-7xl   mx-auto  gap-16 bg-transparent">
-        <div className="flex py-6 px-5 md:p-0 flex-col gap-8  md:w-80  ">
-          <Image src={logo} alt="K3-Lab" className="py-4 w-20 md:w-32" />
-          <p className="body-3 text-[12px] md:text-[14px]">
-            Easily design and deploy business workflows and applications that
-            utilize the power of decentralized compute, storage, and execution.
-          </p>
+    <div className="w-full bg-[#FBFBFB]">
+      <div className="flex w-full   py-9 px-6 flex-wrap  md:justify-between lg:justify-normal gap-8">
+        <div className="flex flex-col gap-3 w-32 sm:w-40 ">
+          <span className="text-blackLight text-sm font-medium leading-5 -tracking-[0.07px] pb-0.5">
+            Product
+          </span>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] cursor-pointer "
+            onClick={() => scrollIntoView('home')}
+          >
+            Home
+          </a>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] cursor-pointer "
+            onClick={() => scrollIntoView('automate')}
+          >
+            Automate
+          </a>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] cursor-pointer "
+            onClick={() => scrollIntoView('innovate')}
+          >
+            Innovate
+          </a>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] cursor-pointer "
+            onClick={() => scrollIntoView('examples')}
+          >
+            Examples
+          </a>
         </div>
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 flex-grow">
-          <div className="flex flex-col gap-4">
-            <h4 className="button  text-gray">Product</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('home')}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('deploy-nav')}
-                >
-                  Deploy
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('design-nav')}
-                >
-                  Design
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('contact-nav')}
-                >
-                  Become a design partner
-                </a>
-              </li>
-              <li className="button-small">
-                <Link href="/onboarding">Operator Onboarding Page</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h4 className="button text-gray">Social</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="button-small">
-                <a href="https://t.me/k3labscoms">Telegram</a>
-              </li>
-              <li className="button-small">
-                <a href="https://twitter.com/k3_labs">X</a>
-              </li>
-              <li className="button-small">
-                <a href="https://github.com/k3-labs">GitHub</a>
-              </li>
-              <li className="button-small">
-                <a href="https://www.youtube.com/@k3-labs">Youtube</a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h4 className="button text-gray">Resources</h4>
-            <ul className="flex flex-col gap-3">
-              <li className="button-small">
-                <Link href="/tos">Terms</Link>
-              </li>
-              <li className="button-small">
-                <a href="https://docs.k3-labs.com/introduction" target="_blank">
-                  Documentation
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col gap-3 w-32 sm:w-40 ">
+          <span className="text-blackLight text-sm font-medium leading-5 -tracking-[0.07px] pb-0.5">
+            Resources
+          </span>
+          <Link
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] cursor-pointer "
+            href="/tos"
+          >
+            Terms
+          </Link>
+          <a
+            href="https://k3-labs.gitbook.io"
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] "
+          >
+            Documentation
+          </a>
         </div>
-        <div className=" md:hidden border-y border-darkGray  ">
-          <details className="px-5 py-3 group">
-            <summary className="flex items-center justify-between cursor-pointer">
-              <h5
-                className="button   width={120}
-            height={44} text-gray"
-              >
-                Product
-              </h5>
-              <Image
-                src={arrowUp}
-                alt="arrow"
-                className="h-4 w-4 transform rotate-180 group-open:rotate-0 "
-              />
-            </summary>
-
-            <ul className="flex flex-col gap-3 pt-2">
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('home')}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('deploy-nav')}
-                >
-                  Deploy
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('design-nav')}
-                >
-                  Design
-                </a>
-              </li>
-              <li className="button-small">
-                <a
-                  className="cursor-pointer"
-                  onClick={() => scrollIntoView('contact-nav')}
-                >
-                  Become a design partner
-                </a>
-              </li>
-            </ul>
-          </details>
-          <details className="px-5 py-3 group">
-            <summary className="flex items-center justify-between cursor-pointer">
-              <h5 className="button text-gray">Social</h5>
-              <Image
-                src={arrowUp}
-                alt="arrow"
-                className="h-4 w-4 transform rotate-180 group-open:rotate-0 "
-              />
-            </summary>
-
-            <ul className="flex flex-col gap-3 pt-2">
-              <li className="button-small">
-                <a href="https://t.me/k3labscoms">Telegram</a>
-              </li>
-              <li className="button-small">
-                <a href="https://twitter.com/k3_labs">X</a>
-              </li>
-              <li className="button-small">
-                <a href="https://github.com/k3-labs">GitHub</a>
-              </li>
-              <li className="button-small">
-                <a href="https://www.youtube.com/@k3-labs">Youtube</a>
-              </li>
-            </ul>
-          </details>
-          <details className="px-5 py-3 group">
-            <summary className="flex items-center justify-between cursor-pointer">
-              <h5 className="button text-gray">Resources</h5>
-              <Image
-                src={arrowUp}
-                alt="arrow"
-                className="h-4 w-4 transform rotate-180 group-open:rotate-0 "
-              />
-            </summary>
-
-            <ul className="flex flex-col gap-3 pt-2">
-              <li className="button-small">
-                <Link href="/tos">Terms</Link>
-              </li>
-              <li className="button-small">
-                <a href="https://docs.k3-labs.com/introduction" target="_blank">
-                  Documentation
-                </a>
-              </li>
-              <li className="button-small">
-                <a href="https://network.k3-labs.com/" target="_blank">
-                  Network/Operator Status
-                </a>
-              </li>
-            </ul>
-          </details>
+        <div className="flex flex-col gap-3 w-32 sm:w-40">
+          <span className="text-blackLight text-sm font-medium leading-5 -tracking-[0.07px] pb-0.5">
+            Social
+          </span>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px] "
+            href="https://t.me/k3labscoms"
+          >
+            Telegram
+          </a>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px]  "
+            href="https://twitter.com/k3_labs"
+          >
+            X
+          </a>
+          <a
+            className="text-grayText text-sm leading-5 -tracking-[0.07px]  "
+            href="https://github.com/k3-labs"
+          >
+            GitHub
+          </a>
+       
         </div>
       </div>
-      <div className=" h-20 border-t  border-darkGray">
-        <div className="  px-5 md:px-16  max-w-7xl  h-full  mx-auto  flex  items-center justify-between ">
-          <p className="button-small">© 2024 K3 Labs</p>
-          <div className="flex gap-4 items-center ">
-            <a href="https://twitter.com/k3_labs">
-              <Image
-                src={twitter}
-                width={16}
-                height={16}
-                alt="Follow us on X"
-              />
-            </a>
-            <a href="https://t.me/k3labscoms">
-              <Image
-                src={telegram}
-                width={16}
-                height={16}
-                alt="Follow us on Telegram"
-              />
-            </a>
-
-            <a href="https://github.com/k3-labs">
-              <Image
-                src={github}
-                width={16}
-                height={16}
-                alt="Follow us on Github"
-              />
-            </a>
-            <a href="https://www.youtube.com/@k3-labs">
-              <Image
-                src={youtube}
-                width={22}
-                height={22}
-                alt="Follow us on Github"
-              />
-            </a>
-          </div>
+      <div className="flex flex-col border-t border-whiteStroke justify-center items-center p-6 lg:py-8 gap-2 md:flex-row md:justify-between ">
+        <span className="text-grayText text-xs leading-[16.8px] -tracking-[0.12px]">
+          © 2025 K3-Labs Ltd. All rights reserved.
+        </span>
+        <div className="flex items-center gap-6 justify-between w-full md:w-auto">
+          {/* <span className="text-grayText text-xs ">Privacy Policy</span> */}
+          <span className="text-grayText text-xs ">
+            <Link href="/tos">Terms of Service</Link>
+          </span>
         </div>
       </div>
     </div>
