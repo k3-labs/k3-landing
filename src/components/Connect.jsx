@@ -40,7 +40,7 @@ const Connect = () => {
               Chat To Support
             </span>
             <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
-              We're here to help you.
+              We&apos;re here to help you.
             </p>
           </div>
           <a
