@@ -7,7 +7,7 @@ import twitter from '../assets/twitter.svg'
 const Connect = () => {
   return (
     <div>
-      <div className="py-12 px-6 md:px-16 lg:px-5 border-y lg:border-b-0 border-whiteStroke">
+      <div className="py-12 px-6 md:px-16 lg:px-5 border-y lg:border-b-0 lg:pb-0 border-whiteStroke">
         <h2
           className="text-[28px] font-semibold leading-[40px]  text-grayText -tracking-[0.4px]"
           id="connect"
@@ -15,7 +15,7 @@ const Connect = () => {
           Connect with us
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6 md:px-16 md:py-12 lg:px-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6 md:px-16 md:py-12  lg:px-5 lg:pt-8">
         <div className="flex flex-col gap-10 px-6 py-7 border border-whiteStroke bg-white rounded-lg ">
           <Image src={salesIcon} width={56} height={56} alt="sales" />
           <div className="flex flex-col gap-2">
