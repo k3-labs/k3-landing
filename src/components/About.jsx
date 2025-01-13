@@ -1,80 +1,210 @@
 import Image from 'next/image'
 
-import securityIcon from './icons/security-icon.svg'
-import turnkeyIcon from './icons/turnkey-icon.svg'
-import web2Icon from './icons/web2-icon.svg'
-
 const About = () => {
   return (
-    <div className="mx-5 md:mx-0 max-w-6xl flex flex-col items-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl border border-darkGray  ">
-        <div className="flex justify-between items-center md:col-span-12 p-4 md:py-8 md:px-6">
-          <h4 className="text-[16px] md:text-[28px] text-gray">
-            <span className="text-white">Launch to production</span> in{' '}
-            <span className="text-white">hours</span> not days/weeks/months and
-            radically
-            <br />
-            reduce direct and indirect costs versus cloud-based services
-          </h4>
-
-          <a
-            className={
-              'hidden md:block bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
-            }
-            href="https://app.k3-labs.com/"
-          >
-            Launch app
-          </a>
+    <div className="w-full  border-b border-b-whiteStroke  ">
+      <div className="flex flex-col gap-5  mx-auto  ">
+        <div className="pt-[50px] xl:pt-[100px]  flex justify-between px-5 items-center">
+          <h2 className="text-xs font-semibold leading-[14px] text-gray uppercase tracking-[0.72px]">
+            [02]
+          </h2>
+          <span className="text-xs font-semibold leading-[14px] text-gray uppercase tracking-[0.72px]">
+            Create custom functions
+          </span>
         </div>
-        {/* <div className="grid grid-cols-3 border-t border-darkGray"> */}
-        <div className="flex flex-col p-4 md:p-6 border-t md:border-r border-darkGray gap-4">
-          <h5 className="text-[14px] md:text-[18px]  subtitle">
-            Turnkey middleware for Web3
-          </h5>
-          <Image src={turnkeyIcon} alt="icon" width={32} height={32} />
-
-          <p className="body-3 text-[12px] md:text-[14px]">
-            {' '}
-            Integrate any decentralized middleware service, or build your own,
-            using our enterprise-grade SDKs or point and click web-forms, all
-            backed by SaaS
-          </p>
-        </div>
-        <div className="flex flex-col p-4 md:p-6 border-t border-darkGray  gap-4">
-          <h5 className="text-[14px] md:text-[18px]  subtitle">
-            Built on Shared Security
-          </h5>
-          <Image src={securityIcon} alt="icon" width={32} height={32} />
-
-          <p className="body-3 text-[12px] md:text-[14px]">
-            {' '}
-            Web3 app development desperately needs better middleware – shared
-            security allows for pay-as-you-go, validation on-demand, radically
-            lowering costs
-          </p>
-        </div>
-        <div className="flex flex-col  p-4 md:p-6 border-t md:border-l border-darkGray gap-4">
-          <h5 className="text-[14px] md:text-[18px] subtitle">
-            Built with Web2 in mind
-          </h5>
-          <Image src={web2Icon} alt="icon" width={32} height={32} />
-
-          <p className="body-3 text-[12px] md:text-[14px]">
-            No need to learn Solidity, study node ops procedures, or worry about
-            gas fees. Use simple point and click deployment workflows instead
-          </p>
+        <div className="relative h-[2px] w-full">
+          <Image src="/dashed-line.svg" alt="dashed line" fill />
         </div>
       </div>
-      {/* <a
-        className={
-          'md:hidden bg-white text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 mt-6 border-gray'
-        }
-        href="https://app.k3-labs.com/"
-      >
-        Launch app
-      </a> */}
+      <div className="flex justify-center relative border-b border-whiteStroke flex-col px-12 py-20 gap-10  xl:py-[75px] xl:px-[148px] xl:h-[376px] overflow-hidden order-1 ">
+        <a
+          href="#"
+          className="bg-white border border-purple rounded-lg  leading-5 h-9 px-2  flex items-center text-black text-[14px] font-medium w-fit"
+        >
+          Innovate
+        </a>
+        <p className="m-0 text-[#8F99A8] max-w-[470px] text-[28px] xl:text-3xl font-medium  leading-10 -tracking-[0.4px]">
+          Launch custom code{' '}
+          <span className="text-blackLight">
+            in hours rather than days/weeks/months
+          </span>
+        </p>
+        <div className="-z-10 absolute -right-56 md:right-0 xl:-right-10 -top-28 xl:-top-32  h-[510px] w-[637px] md:w-[702px]  xl:h-[660px] xl:w-[758px]">
+          <Image src="/vector-globe.svg" alt="dashed line" fill />
+        </div>
+      </div>
+
+      <div className="grid gap-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10">
+        <div className="flex flex-col justify-between p-8 gap-10 lg:pb-2 xl:h-[500px] xl:w-[308px] ">
+          <div className="flex flex-col gap-2">
+            <span className="text-lg font-semibold leading-[26px] -tracking-[0.2px] text-black">
+              Why use K3?
+            </span>
+            <p className="m-0 text-base leading-6 -tracking-[0.16px] text-grayText">
+              Whether you’re a DeFi trader, a Web2 enterprise, or a Web3
+              developer, our platform empowers you to automate day-to-day
+              operations and focus instead on innovation.
+            </p>
+          </div>
+          <a
+            href="#"
+            className="bg-blackLight border border-darkGray rounded-lg  leading-5 h-10 py-2 px-[15px]  items-center text-[#F3F4F6] text-[15px] font-medium  w-fit"
+          >
+            Try Now
+          </a>
+        </div>
+        {/* <div className="basis-full" /> */}
+        <div className=" grid gap-4 grid-cols-1 md:grid-cols-2 md:order-3 lg:order-2 col-span-2 px-12 py-5 lg:p-0 ">
+          <div className="flex flex-col gap-10 px-6 py-7 border border-whiteStroke bg-white rounded-lg ">
+            <svg
+              width="56"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M45.5 28.0508C45.5002 25.2351 44.816 22.4616 43.5064 19.9689L40.8882 22.5871C41.6238 24.3146 42.002 26.1732 42 28.0508H45.5Z"
+                fill="#454545"
+              />
+              <path
+                d="M40.9747 17.5508L38.5 15.0761L30.2493 23.3268C29.5486 22.9848 28.7798 22.805 28 22.8008C26.9617 22.8008 25.9466 23.1087 25.0833 23.6856C24.2199 24.2625 23.547 25.0824 23.1496 26.0417C22.7523 27.001 22.6483 28.0566 22.8509 29.075C23.0535 30.0934 23.5535 31.0289 24.2877 31.7631C25.0219 32.4973 25.9574 32.9973 26.9758 33.1999C27.9942 33.4025 29.0498 33.2985 30.0091 32.9012C30.9684 32.5038 31.7884 31.8309 32.3652 30.9675C32.9421 30.1042 33.25 29.0891 33.25 28.0508C33.2458 27.271 33.066 26.5022 32.724 25.8015L40.9747 17.5508ZM28 29.8008C27.6539 29.8008 27.3156 29.6982 27.0278 29.5059C26.74 29.3136 26.5157 29.0403 26.3832 28.7205C26.2508 28.4007 26.2161 28.0489 26.2836 27.7094C26.3512 27.3699 26.5178 27.0581 26.7626 26.8134C27.0073 26.5686 27.3191 26.4019 27.6586 26.3344C27.9981 26.2669 28.3499 26.3016 28.6697 26.434C28.9895 26.5665 29.2628 26.7908 29.4551 27.0785C29.6474 27.3663 29.75 27.7047 29.75 28.0508C29.7494 28.5147 29.5648 28.9595 29.2368 29.2876C28.9087 29.6156 28.464 29.8002 28 29.8008Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 14.0508C29.8777 14.0489 31.7364 14.4271 33.464 15.1626L36.0822 12.5444C33.4168 11.1489 30.4363 10.4652 27.4292 10.5593C24.4221 10.6535 21.4902 11.5224 18.9174 13.0819C16.3445 14.6414 14.2179 16.8387 12.7432 19.4611C11.2686 22.0835 10.4959 25.0422 10.5 28.0508H14C14.0043 24.3391 15.4806 20.7806 18.1052 18.156C20.7298 15.5314 24.2883 14.0551 28 14.0508Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 52.5508C23.1544 52.5508 18.4175 51.1139 14.3885 48.4218C10.3595 45.7297 7.21931 41.9033 5.36496 37.4265C3.51062 32.9497 3.02543 28.0236 3.97077 23.2711C4.91611 18.5185 7.24951 14.1531 10.6759 10.7267C14.1023 7.30029 18.4678 4.96689 23.2203 4.02155C27.9728 3.07621 32.899 3.5614 37.3758 5.41574C41.8526 7.27009 45.6789 10.4103 48.371 14.4393C51.0631 18.4683 52.5 23.2052 52.5 28.0508C52.4927 34.5464 49.9091 40.7738 45.316 45.3668C40.723 49.9599 34.4956 52.5435 28 52.5508ZM28 7.05079C23.8466 7.05079 19.7865 8.28242 16.333 10.5899C12.8796 12.8974 10.188 16.1772 8.59854 20.0144C7.0091 23.8517 6.59323 28.0741 7.40352 32.1477C8.21381 36.2213 10.2139 39.9631 13.1508 42.9C16.0877 45.8369 19.8295 47.837 23.9031 48.6473C27.9767 49.4576 32.1991 49.0417 36.0364 47.4523C39.8736 45.8628 43.1534 43.1712 45.4609 39.7178C47.7684 36.2643 49 32.2042 49 28.0508C48.9937 22.4832 46.7791 17.1454 42.8423 13.2086C38.9054 9.27167 33.5676 7.05714 28 7.05079Z"
+                fill="#454545"
+              />
+            </svg>
+            <div className="flex flex-col gap-2">
+              <span className="text-grayText text-lg font-semibold leading-[26px] -tracking-[0.2px]">
+                Instantly integrate
+              </span>
+              <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
+                With common Web3 primitives across multiple blockchain
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-10 px-6 py-7 border border-whiteStroke bg-white rounded-lg">
+            <svg
+              width="56"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M45.5 28.0508C45.5002 25.2351 44.816 22.4616 43.5064 19.9689L40.8882 22.5871C41.6238 24.3146 42.002 26.1732 42 28.0508H45.5Z"
+                fill="#454545"
+              />
+              <path
+                d="M40.9747 17.5508L38.5 15.0761L30.2493 23.3268C29.5486 22.9848 28.7798 22.805 28 22.8008C26.9617 22.8008 25.9466 23.1087 25.0833 23.6856C24.2199 24.2625 23.547 25.0824 23.1496 26.0417C22.7523 27.001 22.6483 28.0566 22.8509 29.075C23.0535 30.0934 23.5535 31.0289 24.2877 31.7631C25.0219 32.4973 25.9574 32.9973 26.9758 33.1999C27.9942 33.4025 29.0498 33.2985 30.0091 32.9012C30.9684 32.5038 31.7884 31.8309 32.3652 30.9675C32.9421 30.1042 33.25 29.0891 33.25 28.0508C33.2458 27.271 33.066 26.5022 32.724 25.8015L40.9747 17.5508ZM28 29.8008C27.6539 29.8008 27.3156 29.6982 27.0278 29.5059C26.74 29.3136 26.5157 29.0403 26.3832 28.7205C26.2508 28.4007 26.2161 28.0489 26.2836 27.7094C26.3512 27.3699 26.5178 27.0581 26.7626 26.8134C27.0073 26.5686 27.3191 26.4019 27.6586 26.3344C27.9981 26.2669 28.3499 26.3016 28.6697 26.434C28.9895 26.5665 29.2628 26.7908 29.4551 27.0785C29.6474 27.3663 29.75 27.7047 29.75 28.0508C29.7494 28.5147 29.5648 28.9595 29.2368 29.2876C28.9087 29.6156 28.464 29.8002 28 29.8008Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 14.0508C29.8777 14.0489 31.7364 14.4271 33.464 15.1626L36.0822 12.5444C33.4168 11.1489 30.4363 10.4652 27.4292 10.5593C24.4221 10.6535 21.4902 11.5224 18.9174 13.0819C16.3445 14.6414 14.2179 16.8387 12.7432 19.4611C11.2686 22.0835 10.4959 25.0422 10.5 28.0508H14C14.0043 24.3391 15.4806 20.7806 18.1052 18.156C20.7298 15.5314 24.2883 14.0551 28 14.0508Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 52.5508C23.1544 52.5508 18.4175 51.1139 14.3885 48.4218C10.3595 45.7297 7.21931 41.9033 5.36496 37.4265C3.51062 32.9497 3.02543 28.0236 3.97077 23.2711C4.91611 18.5185 7.24951 14.1531 10.6759 10.7267C14.1023 7.30029 18.4678 4.96689 23.2203 4.02155C27.9728 3.07621 32.899 3.5614 37.3758 5.41574C41.8526 7.27009 45.6789 10.4103 48.371 14.4393C51.0631 18.4683 52.5 23.2052 52.5 28.0508C52.4927 34.5464 49.9091 40.7738 45.316 45.3668C40.723 49.9599 34.4956 52.5435 28 52.5508ZM28 7.05079C23.8466 7.05079 19.7865 8.28242 16.333 10.5899C12.8796 12.8974 10.188 16.1772 8.59854 20.0144C7.0091 23.8517 6.59323 28.0741 7.40352 32.1477C8.21381 36.2213 10.2139 39.9631 13.1508 42.9C16.0877 45.8369 19.8295 47.837 23.9031 48.6473C27.9767 49.4576 32.1991 49.0417 36.0364 47.4523C39.8736 45.8628 43.1534 43.1712 45.4609 39.7178C47.7684 36.2643 49 32.2042 49 28.0508C48.9937 22.4832 46.7791 17.1454 42.8423 13.2086C38.9054 9.27167 33.5676 7.05714 28 7.05079Z"
+                fill="#454545"
+              />
+            </svg>
+            <div className="flex flex-col gap-2">
+              <span className="text-grayText text-lg font-semibold leading-[26px] -tracking-[0.2px]">
+                Instantly integrate
+              </span>
+              <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
+                With common Web3 primitives across multiple blockchain
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-10 px-6 py-7 border-2 border-blue bg-white rounded-lg">
+            <svg
+              width="56"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M45.5 28.0508C45.5002 25.2351 44.816 22.4616 43.5064 19.9689L40.8882 22.5871C41.6238 24.3146 42.002 26.1732 42 28.0508H45.5Z"
+                fill="#454545"
+              />
+              <path
+                d="M40.9747 17.5508L38.5 15.0761L30.2493 23.3268C29.5486 22.9848 28.7798 22.805 28 22.8008C26.9617 22.8008 25.9466 23.1087 25.0833 23.6856C24.2199 24.2625 23.547 25.0824 23.1496 26.0417C22.7523 27.001 22.6483 28.0566 22.8509 29.075C23.0535 30.0934 23.5535 31.0289 24.2877 31.7631C25.0219 32.4973 25.9574 32.9973 26.9758 33.1999C27.9942 33.4025 29.0498 33.2985 30.0091 32.9012C30.9684 32.5038 31.7884 31.8309 32.3652 30.9675C32.9421 30.1042 33.25 29.0891 33.25 28.0508C33.2458 27.271 33.066 26.5022 32.724 25.8015L40.9747 17.5508ZM28 29.8008C27.6539 29.8008 27.3156 29.6982 27.0278 29.5059C26.74 29.3136 26.5157 29.0403 26.3832 28.7205C26.2508 28.4007 26.2161 28.0489 26.2836 27.7094C26.3512 27.3699 26.5178 27.0581 26.7626 26.8134C27.0073 26.5686 27.3191 26.4019 27.6586 26.3344C27.9981 26.2669 28.3499 26.3016 28.6697 26.434C28.9895 26.5665 29.2628 26.7908 29.4551 27.0785C29.6474 27.3663 29.75 27.7047 29.75 28.0508C29.7494 28.5147 29.5648 28.9595 29.2368 29.2876C28.9087 29.6156 28.464 29.8002 28 29.8008Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 14.0508C29.8777 14.0489 31.7364 14.4271 33.464 15.1626L36.0822 12.5444C33.4168 11.1489 30.4363 10.4652 27.4292 10.5593C24.4221 10.6535 21.4902 11.5224 18.9174 13.0819C16.3445 14.6414 14.2179 16.8387 12.7432 19.4611C11.2686 22.0835 10.4959 25.0422 10.5 28.0508H14C14.0043 24.3391 15.4806 20.7806 18.1052 18.156C20.7298 15.5314 24.2883 14.0551 28 14.0508Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 52.5508C23.1544 52.5508 18.4175 51.1139 14.3885 48.4218C10.3595 45.7297 7.21931 41.9033 5.36496 37.4265C3.51062 32.9497 3.02543 28.0236 3.97077 23.2711C4.91611 18.5185 7.24951 14.1531 10.6759 10.7267C14.1023 7.30029 18.4678 4.96689 23.2203 4.02155C27.9728 3.07621 32.899 3.5614 37.3758 5.41574C41.8526 7.27009 45.6789 10.4103 48.371 14.4393C51.0631 18.4683 52.5 23.2052 52.5 28.0508C52.4927 34.5464 49.9091 40.7738 45.316 45.3668C40.723 49.9599 34.4956 52.5435 28 52.5508ZM28 7.05079C23.8466 7.05079 19.7865 8.28242 16.333 10.5899C12.8796 12.8974 10.188 16.1772 8.59854 20.0144C7.0091 23.8517 6.59323 28.0741 7.40352 32.1477C8.21381 36.2213 10.2139 39.9631 13.1508 42.9C16.0877 45.8369 19.8295 47.837 23.9031 48.6473C27.9767 49.4576 32.1991 49.0417 36.0364 47.4523C39.8736 45.8628 43.1534 43.1712 45.4609 39.7178C47.7684 36.2643 49 32.2042 49 28.0508C48.9937 22.4832 46.7791 17.1454 42.8423 13.2086C38.9054 9.27167 33.5676 7.05714 28 7.05079Z"
+                fill="#454545"
+              />
+            </svg>
+            <div className="flex flex-col gap-2">
+              <span className="text-grayText text-lg font-semibold leading-[26px] -tracking-[0.2px]">
+                Instantly integrate
+              </span>
+              <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
+                With common Web3 primitives across multiple blockchain
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-10 px-6 py-7 border border-whiteStroke bg-white rounded-lg">
+            <svg
+              width="56"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M45.5 28.0508C45.5002 25.2351 44.816 22.4616 43.5064 19.9689L40.8882 22.5871C41.6238 24.3146 42.002 26.1732 42 28.0508H45.5Z"
+                fill="#454545"
+              />
+              <path
+                d="M40.9747 17.5508L38.5 15.0761L30.2493 23.3268C29.5486 22.9848 28.7798 22.805 28 22.8008C26.9617 22.8008 25.9466 23.1087 25.0833 23.6856C24.2199 24.2625 23.547 25.0824 23.1496 26.0417C22.7523 27.001 22.6483 28.0566 22.8509 29.075C23.0535 30.0934 23.5535 31.0289 24.2877 31.7631C25.0219 32.4973 25.9574 32.9973 26.9758 33.1999C27.9942 33.4025 29.0498 33.2985 30.0091 32.9012C30.9684 32.5038 31.7884 31.8309 32.3652 30.9675C32.9421 30.1042 33.25 29.0891 33.25 28.0508C33.2458 27.271 33.066 26.5022 32.724 25.8015L40.9747 17.5508ZM28 29.8008C27.6539 29.8008 27.3156 29.6982 27.0278 29.5059C26.74 29.3136 26.5157 29.0403 26.3832 28.7205C26.2508 28.4007 26.2161 28.0489 26.2836 27.7094C26.3512 27.3699 26.5178 27.0581 26.7626 26.8134C27.0073 26.5686 27.3191 26.4019 27.6586 26.3344C27.9981 26.2669 28.3499 26.3016 28.6697 26.434C28.9895 26.5665 29.2628 26.7908 29.4551 27.0785C29.6474 27.3663 29.75 27.7047 29.75 28.0508C29.7494 28.5147 29.5648 28.9595 29.2368 29.2876C28.9087 29.6156 28.464 29.8002 28 29.8008Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 14.0508C29.8777 14.0489 31.7364 14.4271 33.464 15.1626L36.0822 12.5444C33.4168 11.1489 30.4363 10.4652 27.4292 10.5593C24.4221 10.6535 21.4902 11.5224 18.9174 13.0819C16.3445 14.6414 14.2179 16.8387 12.7432 19.4611C11.2686 22.0835 10.4959 25.0422 10.5 28.0508H14C14.0043 24.3391 15.4806 20.7806 18.1052 18.156C20.7298 15.5314 24.2883 14.0551 28 14.0508Z"
+                fill="#454545"
+              />
+              <path
+                d="M28 52.5508C23.1544 52.5508 18.4175 51.1139 14.3885 48.4218C10.3595 45.7297 7.21931 41.9033 5.36496 37.4265C3.51062 32.9497 3.02543 28.0236 3.97077 23.2711C4.91611 18.5185 7.24951 14.1531 10.6759 10.7267C14.1023 7.30029 18.4678 4.96689 23.2203 4.02155C27.9728 3.07621 32.899 3.5614 37.3758 5.41574C41.8526 7.27009 45.6789 10.4103 48.371 14.4393C51.0631 18.4683 52.5 23.2052 52.5 28.0508C52.4927 34.5464 49.9091 40.7738 45.316 45.3668C40.723 49.9599 34.4956 52.5435 28 52.5508ZM28 7.05079C23.8466 7.05079 19.7865 8.28242 16.333 10.5899C12.8796 12.8974 10.188 16.1772 8.59854 20.0144C7.0091 23.8517 6.59323 28.0741 7.40352 32.1477C8.21381 36.2213 10.2139 39.9631 13.1508 42.9C16.0877 45.8369 19.8295 47.837 23.9031 48.6473C27.9767 49.4576 32.1991 49.0417 36.0364 47.4523C39.8736 45.8628 43.1534 43.1712 45.4609 39.7178C47.7684 36.2643 49 32.2042 49 28.0508C48.9937 22.4832 46.7791 17.1454 42.8423 13.2086C38.9054 9.27167 33.5676 7.05714 28 7.05079Z"
+                fill="#454545"
+              />
+            </svg>
+            <div className="flex flex-col gap-2">
+              <span className="text-grayText text-lg font-semibold leading-[26px] -tracking-[0.2px]">
+                Instantly integrate
+              </span>
+              <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
+                With common Web3 primitives across multiple blockchain
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className=" flex justify-end p-8 pr-0  md:order-2 lg:order-3 ">
+          <div className=" flex items-center w-[280px] h-[325px]  xl:h-[500px] xl:w-[308px] ">
+            <Image
+              src="/functions.svg"
+              alt="available functions"
+              height={330}
+              width={400}
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    // </div>
   )
 }
 

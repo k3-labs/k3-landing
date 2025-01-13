@@ -1,11 +1,16 @@
 'use client'
-import Button from '@/components/Button'
 import hamburger from '@/components/icons/hamburger.svg'
-import logo from '@/components/icons/logo-white.svg'
+import logo from '@/components/icons/logo-black.svg'
 import x from '@/components/icons/x.svg'
-import { Disclosure } from '@headlessui/react'
+import {
+  Button,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel
+} from '@headlessui/react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export const scrollIntoView = (id) => {
   if (id === 'home') {
@@ -36,162 +41,95 @@ export default function Example() {
   }, [])
 
   return (
-    <Disclosure as="nav" className="w-full fixed z-50">
-      {({ open, close }) => (
-        <div
-          id="full-nav"
-          className="flex flex-col z-50 fixed justify-between items-center w-full   "
-          style={{
-            backgroundColor: open || scrollY > 100 ? '#010101' : 'transparent',
-            borderBottom: open || scrollY > 100 ? '1px solid #1A1A1A' : 'none'
-          }}
-        >
-          <div className="h-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-            <div className="flex h-16 justify-between items-center">
-              <Image
-                priority
-                src={logo}
-                className="w-20 md:w-32 relative z-20"
-                alt="Follow us on Twitter"
-              />
-
-              <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
-                <ul className="flex flex-row justify-between items-center p-0 gap-10 ">
-                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a
-                      className="cursor-pointer"
-                      onClick={() => scrollIntoView('home')}
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a
-                      className="cursor-pointer"
-                      onClick={() => scrollIntoView('deploy-nav')}
-                    >
-                      Deploy
-                    </a>
-                  </li>
-                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a
-                      className="cursor-pointer"
-                      onClick={() => scrollIntoView('design-nav')}
-                    >
-                      Design
-                    </a>
-                  </li>
-                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a
-                      className="cursor-pointer"
-                      onClick={() => scrollIntoView('contact-nav')}
-                    >
-                      Contact Us
-                    </a>
-                  </li>
-                  <li className="text-white font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize">
-                    <a
-                      href="https://docs.k3-labs.com/introduction"
-                      target="_blank"
-                    >
-                      Documentation
-                    </a>
-                  </li>
-                </ul>
+    <Disclosure as="nav" className="w-screen h-fit fixed inset-0 z-50 ">
+      {({ open }) => (
+        <>
+          <div className="w-full fixed  border-b border-whiteStroke">
+            <nav className=" bg-white h-[72px] py-[18px]  max-w-[1390px] mx-auto  px-6 flex justify-between items-center  ">
+              <Image priority src={logo} alt="K3 Labs logo" />
+              <div className="hidden md:flex md:items-center xl:grow xl:justify-between xl:px-[50px] ">
+                <div className=" flex items-center   ">
+                  <a
+                    className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
+                    onClick={() => scrollIntoView('home')}
+                  >
+                    Automate
+                  </a>
+                  <a
+                    className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
+                    onClick={() => scrollIntoView('home')}
+                  >
+                    Innovate
+                  </a>
+                  <a
+                    className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
+                    onClick={() => scrollIntoView('home')}
+                  >
+                    Examples
+                  </a>
+                </div>
+                <div className=" flex items-center  ">
+                  <a
+                    className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
+                    onClick={() => scrollIntoView('home')}
+                  >
+                    Contact Us
+                  </a>
+                  <a
+                    className="cursor-pointer text-[#2E3238] leading-5 p-2 text-[15px] font-medium flex items-center"
+                    onClick={() => scrollIntoView('home')}
+                  >
+                    Docs
+                  </a>
+                </div>
               </div>
-              <a
-                className={
-                  'bg-white hidden md:block text-blackLight w-fit font-normal  text-[14px] leading-5 tracking-[-0.01em] capitalize   whitespace-nowrap rounded-lg border gap-2 py-2.5 px-3 border-gray'
-                }
-                href="https://app.k3-labs.com/"
-              >
-                Launch app
-              </a>
-
-              <div className="-ml-2 mr-2 flex items-center md:hidden">
-                {/* Mobile menu button */}
-                <Disclosure.Button className="relative inline-flex items-center justify-center ">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <Image
-                      alt="close menu icon"
-                      className="block h-8 w-8"
-                      src={x}
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <Image
-                      alt="hamburger menu icon"
-                      className="block h-8 w-8"
-                      src={hamburger}
-                      aria-hidden="true"
-                    />
+              <div className="flex items-center gap-6">
+                <a
+                  href="#"
+                  className={twMerge(
+                    'bg-blackLight border border-darkGray rounded-lg  leading-5 h-9 py-2 px-[15px] flex items-center text-[#F3F4F6] text-[15px] font-medium ',
+                    open && 'hidden'
                   )}
-                </Disclosure.Button>
+                >
+                  Automate Now
+                </a>
+                <DisclosureButton className="w-4 h-4 md:hidden">
+                  {!open ? (
+                    <Image src={hamburger} alt="Menu" />
+                  ) : (
+                    <Image src={x} alt="Close" />
+                  )}
+                </DisclosureButton>
               </div>
-            </div>
+            </nav>
           </div>
-          <Disclosure.Panel className="md:hidden mt-10 w-full gap-6 h-screen flex flex-col items-center">
-            <Button
-              className=" border-darkGray  w-[calc(100%-40px)] mx-auto  "
-              onClick={() => {
-                close()
-                scrollIntoView('contact-nav')
-              }}
+          <DisclosurePanel className="  mt-[72px] w-full h-screen ">
+            <div className="flex flex-col gap-2 pb-4 items-start justify-center bg-white ">
+              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none  font-medium text-[#2E3238]">
+                Automate
+              </Button>
+              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none marker:font-medium text-[#2E3238]">
+                Innovate
+              </Button>
+              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+                Examples
+              </Button>
+              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+                Contact Us
+              </Button>
+              <Button className="w-full py-4 flex items-center justify-center text-xl leading-none font-medium text-[#2E3238]">
+                Docs
+              </Button>
+            </div>
+            <div
+              className="h-full bg-black bg-opacity-20"
               style={{
-                background:
-                  'linear-gradient(171deg, rgba(255, 255, 255, 0.09) 36.08%, rgba(255, 255, 255, 0.072) 86.19%)'
+                backdropFilter: 'blur(5px)',
+                WebkitBackdropFilter: 'blur(5px)'
               }}
-            >
-              Connect with us
-            </Button>
-            <ul className="bg-black  w-full flex flex-col justify-between items-center pb-12 gap-4 ">
-              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
-                <a
-                  className="w-full"
-                  onClick={() => {
-                    close()
-                    scrollIntoView('home')
-                  }}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
-                <a
-                  className="w-full"
-                  onClick={() => {
-                    close()
-                    scrollIntoView('deploy-nav')
-                  }}
-                >
-                  Deploy
-                </a>
-              </li>
-              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
-                <a
-                  className="w-full"
-                  onClick={() => {
-                    close()
-                    scrollIntoView('design-nav')
-                  }}
-                >
-                  Design
-                </a>
-              </li>
-              <li className="text-white flex button w-[calc(100%-40px)] border-darkGray border-b pb-2">
-                <a
-                  href="https://docs.k3-labs.com/introduction"
-                  className="w-full"
-                  target="_blank"
-                >
-                  Documentation
-                </a>
-              </li>
-            </ul>
-          </Disclosure.Panel>
-        </div>
+            />
+          </DisclosurePanel>
+        </>
       )}
     </Disclosure>
   )
