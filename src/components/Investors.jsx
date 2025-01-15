@@ -2,7 +2,7 @@ import Image from 'next/image'
 import aztlan from '../assets/aztlan.svg'
 import bff from '../assets/bff.svg'
 import cubist from '../assets/cubist.png'
-import eigenlayer from '../assets/eigenlayer.png'
+import eigenlayer from '../assets/eigenlayer.svg'
 import finality from '../assets/finality.svg'
 import novanet from '../assets/nova-net.png'
 import othenthic from '../assets/othenthic.png'
@@ -13,21 +13,57 @@ const Investors = () => {
   return (
     <div className="bg-[#FBFBFB] p-12 md:p-14 lg:p-[120px]  ">
       <div className="flex  justify-center items-center w-full  gap-12 flex-wrap  ">
-        <Image src={bff} alt="bbf-logo" height={80} />
-        <Image src={finality} alt="finality-logo" height={80} />
-        <Image src={eigenlayer} alt="eigenlayer-logo" height={75} />
+        <Image quality={100} unoptimized src={bff} alt="bbf-logo" height={70} />
+        <Image
+          quality={100}
+          unoptimized
+          src={finality}
+          alt="finality-logo"
+          height={65}
+        />
+        <Image
+          quality={100}
+          unoptimized
+          src={eigenlayer}
+          alt="eigenlayer-logo"
+          height={60}
+        />
 
-        <Image src={stability} alt="stability-logo" height={40} />
+        <Image
+          quality={100}
+          unoptimized
+          src={stability}
+          alt="stability-logo"
+          height={35}
+        />
         <div className="flex items-center h-[38px] ">
-          <Image src={uniblock} alt="uniblock-logo" height={40} />
+          <Image
+            quality={100}
+            unoptimized
+            src={uniblock}
+            alt="uniblock-logo"
+            height={30}
+          />
         </div>
-        <Image src={novanet} alt="nova-net-logo" height={95} />
-        <div className="flex gap-2 items-center">
-          <Image src={cubist} alt="cubist-logo" height={50} />
+        <Image
+          quality={100}
+          unoptimized
+          src={novanet}
+          alt="nova-net-logo"
+          height={80}
+        />
+        <div className="flex gap-1 items-center">
+          <Image
+            quality={100}
+            unoptimized
+            src={cubist}
+            alt="cubist-logo"
+            height={45}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="8.26rem"
-            height="2.1rem"
+            width="6rem"
+            height="1.5rem"
             fill="currentColor"
             viewBox="0 0 133 34"
           >
@@ -41,11 +77,23 @@ const Investors = () => {
             ></path>
           </svg>
         </div>
-        <Image src={aztlan} alt="aztlan-logo" height={90} />
+        <Image
+          quality={100}
+          unoptimized
+          src={aztlan}
+          alt="aztlan-logo"
+          height={75}
+        />
 
         <div className="flex gap-2 items-center">
-          <Image src={othenthic} alt="othenthic-logo" height={40} />
-          <h5 className="text-blackLight text-3xl font-medium leading-5 -tracking-[0.07px]">
+          <Image
+            quality={100}
+            unoptimized
+            src={othenthic}
+            alt="othenthic-logo"
+            height={35}
+          />
+          <h5 className="text-blackLight text-2xl font-medium leading-5 -tracking-[0.07px]">
             Othenthic
           </h5>
         </div>

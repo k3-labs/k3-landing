@@ -119,10 +119,7 @@ const Features = () => {
         </p>
       </div>
       <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div
-          className="flex flex-col order-1 justify-between p-8 lg:h-[550px] lg:min-w-[300px] lg:w-[300px]  "
-          id="examples"
-        >
+        <div className="flex flex-col order-1 justify-between p-8 lg:h-[550px] lg:min-w-[300px] lg:w-[300px]  ">
           <div className="flex flex-col gap-2">
             <span className="text-lg font-semibold leading-[26px] -tracking-[0.2px] text-black">
               {selectedTemplate.title}
@@ -151,11 +148,15 @@ const Features = () => {
             height={0}
             sizes="100vw"
             quality={100}
-            style={{ width: 'auto', height: '100%' }} // optional
+            unoptimized
+            style={{ width: 'auto', height: '100%' }}
           />
         </div>
 
-        <div className="flex flex-wrap lg:flex-col order-[0] md:order-3 p-8 lg:h-[550px] lg:min-w-[300px] lg:w-[300px] gap-2 ">
+        <div
+          className="flex flex-wrap lg:flex-col order-[0] md:order-3 p-8 lg:h-[550px] lg:min-w-[300px] lg:w-[300px] gap-2 "
+          id="examples"
+        >
           {Object.entries(Templates).map(([key, value]) => (
             <div
               key={key}

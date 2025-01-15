@@ -14,6 +14,8 @@ const Hero = () => {
           // fill
           objectFit="cover"
           alt="vector"
+          quality={100}
+          unoptimized
         />
         <Image
           className="w-full h-full max-h-[777px] absolute inset-0 top-8    flex-grow -z-10 md:top-[120px] lg:top-[0px]  lg:hidden"
@@ -21,6 +23,8 @@ const Hero = () => {
           // fill
           objectFit="cover"
           alt="vector"
+          quality={100}
+          unoptimized
         />
 
         <div className="flex w-full flex-col  items-start pt-10   gap-16 lg:gap-36 lg:pt-36 ">
@@ -55,6 +59,8 @@ const Hero = () => {
               alt="builder"
               layout="fill"
               objectFit="contain"
+              quality={100}
+              unoptimized
             />
           </div>
         </div>
