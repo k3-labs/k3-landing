@@ -114,6 +114,8 @@ const About = () => {
               alt="available functions"
               height={330}
               width={400}
+              quality={100}
+              unoptimized
             />
           </div>
         </div>
