@@ -1,7 +1,7 @@
 'use client'
+import BrowserSVG from '@/components/Browser'
 import { scrollIntoView } from '@/components/Navigation'
 import Image from 'next/image'
-import browser from '../../public/browser.svg'
 import vectorSmall from '../app/vector-small.svg'
 import vector from '../app/vector.svg'
 
@@ -55,14 +55,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative w-[440px] mx-auto h-[262px] md:w-[682px] md:h-[406px]  lg:w-[1280px] lg:h-[763px] ">
-            <Image
-              src={browser}
-              alt="browser"
-              layout="fill"
-              objectFit="contain"
-              quality={100}
-              unoptimized
-            />
+            <BrowserSVG />
           </div>
         </div>
       </div>
