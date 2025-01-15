@@ -11,7 +11,15 @@ import uniblock from '../assets/uniblock.svg'
 
 const Investors = () => {
   return (
-    <div className="bg-[#FBFBFB] p-12 md:p-14 lg:p-[120px]  ">
+    <div className="bg-[#FBFBFB]  pb-12 md:pb-14 lg:pb-[120px]  ">
+      <div className="py-12 px-6 md:px-16 lg:px-5 ">
+        <h2
+          className="text-[28px] font-semibold leading-[40px]  text-grayText -tracking-[0.4px]"
+          id="connect"
+        >
+          Ecosystem Partners
+        </h2>
+      </div>
       <div className="flex  justify-center items-center w-full  gap-12 flex-wrap  ">
         <Image quality={100} unoptimized src={bff} alt="bbf-logo" height={70} />
         <Image
