@@ -67,7 +67,7 @@ const About = () => {
                 Instantly integrate
               </span>
               <p className="text-grayText text-sm leading-5 -tracking-[0.35px] m-0">
-                With common Web3 primitives across multiple blockchain
+                With common Web3 primitives across multiple blockchains
               </p>
             </div>
           </div>

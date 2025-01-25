@@ -113,9 +113,9 @@ const Features = () => {
           <span className="text-blackLight">
             A simple, template driven approach to
           </span>{' '}
-          building <span className="text-blackLight"> Web3</span> automations
-          workflows that read and write between on and off-chain data sources,
-          and instantly trigger processes or alerts.
+          building <span className="text-blackLight">Web3</span> workflows that
+          read and write between on and off-chain data sources, and instantly
+          trigger processes or alerts.
         </p>
       </div>
       <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
